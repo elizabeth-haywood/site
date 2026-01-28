@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth Bowles Haywood | In Loving Memory</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #fdfcfa;
+            --text: #1a1a1a;
+            --text-light: #6b6b6b;
+            --border: #e5e5e5;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.9;
+            font-size: 18px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            padding: 6rem 0 4rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .memorial-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .dates {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Photo */
+        .photo-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .photo-section img {
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        /* Divider */
+        .divider {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-light);
+        }
+
+        .divider span {
+            font-size: 1.5rem;
+            letter-spacing: 1rem;
+        }
+
+        /* Quote */
+        .quote-section {
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+
+        blockquote::before {
+            content: '"';
+        }
+
+        blockquote::after {
+            content: '"';
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: normal;
+        }
+
+        /* Story */
+        .story-section {
+            padding: 3rem 0;
+        }
+
+        .story-section h2 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .story-section p {
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            text-align: justify;
+        }
+
+        .story-section p:first-of-type::first-letter {
+            font-size: 4rem;
+            float: left;
+            line-height: 0.8;
+            margin-right: 0.5rem;
+            margin-top: 0.15rem;
+            font-weight: 500;
+        }
+
+        /* Facts */
+        .facts-section {
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .facts-section h2 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .facts-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 3rem;
+        }
+
+        .fact-item {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .fact-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        .fact-value {
+            font-size: 1.1rem;
+        }
+
+        /* Tributes */
+        .tributes-section {
+            padding: 4rem 0;
+        }
+
+        .tributes-section h2 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .tribute {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tribute:last-child {
+            border-bottom: none;
+        }
+
+        .tribute-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .tribute-text::before {
+            content: '"';
+        }
+
+        .tribute-text::after {
+            content: '"';
+        }
+
+        .tribute-author {
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .tribute-name {
+            font-weight: 500;
+        }
+
+        .tribute-relation {
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-dates {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-message {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            header {
+                padding: 4rem 0 3rem;
+            }
+
+            .facts-list {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-section img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="memorial-label">In Loving Memory</p>
+            <h1>Elizabeth Bowles Haywood</h1>
+            <p class="dates">October 4, 1953 - January 26, 2026</p>
+        </header>
+
+        <section class="photo-section">
+            <img src="../elizabeth.jpg" alt="Elizabeth Bowles Haywood">
+        </section>
+
+        <div class="divider">
+            <span>* * *</span>
+        </div>
+
+        <section class="quote-section">
+            <blockquote>She touched the lives of everyone she met with her warmth, wisdom, and unwavering love. Her spirit lives on in the countless hearts she touched.</blockquote>
+            <p class="quote-author">- A Life Well Lived</p>
+        </section>
+
+        <div class="divider">
+            <span>* * *</span>
+        </div>
+
+        <section class="story-section">
+            <h2>Her Story</h2>
+            <p>Elizabeth Bowles Haywood was born on October 4, 1953, and from her earliest days, she possessed a remarkable gift for bringing warmth and joy to those around her. Her life was a beautiful tapestry woven with love, dedication, and an unwavering commitment to her family and community.</p>
+            <p>Throughout her 72 years, Elizabeth touched countless lives with her generous spirit and gentle wisdom. She had an extraordinary ability to make everyone feel seen and valued, whether they were lifelong friends or strangers she had just met.</p>
+            <p>Her home was always filled with laughter, the aroma of home-cooked meals, and the warmth of genuine hospitality. Elizabeth believed that the most precious gifts in life were the moments shared with loved ones, and she created countless such moments throughout her remarkable journey.</p>
+            <p>Elizabeth faced life's challenges with grace and resilience, teaching those around her the power of perseverance and the importance of maintaining hope even in difficult times. Her strength was quiet but profound, inspiring all who knew her to live with greater purpose and compassion.</p>
+        </section>
+
+        <section class="facts-section">
+            <h2>Remembering Elizabeth</h2>
+            <div class="facts-list">
+                <div class="fact-item">
+                    <p class="fact-label">Born</p>
+                    <p class="fact-value">October 4, 1953</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Passed</p>
+                    <p class="fact-value">January 26, 2026</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Years of Life</p>
+                    <p class="fact-value">72 Beautiful Years</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Greatest Joy</p>
+                    <p class="fact-value">Her Beloved Family</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Known For</p>
+                    <p class="fact-value">Warmth & Hospitality</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Her Gift</p>
+                    <p class="fact-value">Unconditional Love</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tributes-section">
+            <h2>Tributes</h2>
+
+            <article class="tribute">
+                <p class="tribute-text">Mom had a way of making everyone feel like they were the most important person in the room. Her love was unconditional and her wisdom was endless. I carry her with me every day.</p>
+                <p class="tribute-author">
+                    <span class="tribute-name">Sarah</span> - <span class="tribute-relation">Daughter</span>
+                </p>
+            </article>
+
+            <article class="tribute">
+                <p class="tribute-text">Elizabeth was more than a friend; she was family. Her kindness knew no bounds, and her laughter was infectious. The world is dimmer without her light.</p>
+                <p class="tribute-author">
+                    <span class="tribute-name">Margaret</span> - <span class="tribute-relation">Lifelong Friend</span>
+                </p>
+            </article>
+
+            <article class="tribute">
+                <p class="tribute-text">Grandma taught me that love is shown through actions, not just words. She showed up for everyone, every time. Her legacy lives on in all of us she loved.</p>
+                <p class="tribute-author">
+                    <span class="tribute-name">James</span> - <span class="tribute-relation">Grandson</span>
+                </p>
+            </article>
+
+            <article class="tribute">
+                <p class="tribute-text">Elizabeth had the rare gift of making every gathering feel special. Her hospitality was legendary, and her home was always full of love and warmth.</p>
+                <p class="tribute-author">
+                    <span class="tribute-name">Robert</span> - <span class="tribute-relation">Neighbor</span>
+                </p>
+            </article>
+        </section>
+
+        <footer>
+            <p class="footer-dates">1953 - 2026</p>
+            <p class="footer-message">Forever in our hearts</p>
+        </footer>
+    </div>
+</body>
+</html>

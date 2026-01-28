@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth Bowles Haywood | In Loving Memory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0a0a0a;
+            --text: #ffffff;
+            --text-muted: #888888;
+            --overlay: rgba(0,0,0,0.5);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Full Screen Photo Section */
+        .photo-section {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .photo-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.4);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, var(--bg) 100%);
+        }
+
+        .photo-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+            max-width: 900px;
+        }
+
+        /* Hero Section */
+        .section-hero .photo-bg {
+            background-image: url('../elizabeth.jpg');
+        }
+
+        .hero-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-dates {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            letter-spacing: 0.2em;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+
+        .scroll-indicator svg {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        /* Quote Section */
+        .section-quote {
+            min-height: 80vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+
+        .quote-text {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .quote-author {
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* Photo Feature Section */
+        .section-photo-feature {
+            min-height: 100vh;
+        }
+
+        .section-photo-feature .photo-bg {
+            background-image: url('../elizabeth.jpg');
+            filter: brightness(0.3) grayscale(30%);
+        }
+
+        .section-photo-feature .photo-overlay {
+            background: linear-gradient(to right, var(--bg) 0%, transparent 30%, transparent 70%, var(--bg) 100%);
+        }
+
+        .feature-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            text-align: left;
+            padding: 4rem;
+        }
+
+        .feature-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .feature-text {
+            font-weight: 300;
+            color: var(--text-muted);
+            line-height: 2;
+        }
+
+        /* Story Sections */
+        .section-story {
+            min-height: 70vh;
+        }
+
+        .section-story-1 {
+            background: linear-gradient(180deg, var(--bg) 0%, #0f1419 100%);
+        }
+
+        .section-story-2 {
+            background: linear-gradient(180deg, #0f1419 0%, #1a1a2e 100%);
+        }
+
+        .section-story-3 {
+            background: linear-gradient(180deg, #1a1a2e 0%, var(--bg) 100%);
+        }
+
+        .story-content {
+            max-width: 700px;
+        }
+
+        .story-number {
+            font-family: 'Cinzel', serif;
+            font-size: 6rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.1);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .story-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .story-text {
+            font-weight: 300;
+            color: var(--text-muted);
+            line-height: 2;
+        }
+
+        /* Facts Section */
+        .section-facts {
+            min-height: 60vh;
+            background: var(--bg);
+        }
+
+        .facts-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+        }
+
+        .fact-item {
+            text-align: center;
+        }
+
+        .fact-value {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .fact-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        /* Tributes Section */
+        .section-tributes {
+            padding: 8rem 2rem;
+            background: linear-gradient(180deg, var(--bg) 0%, #16213e 50%, var(--bg) 100%);
+        }
+
+        .tributes-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .tributes-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+        }
+
+        .tributes-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tribute-item {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .tribute-item:last-child {
+            border-bottom: none;
+        }
+
+        .tribute-text {
+            font-size: 1.25rem;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: var(--text);
+        }
+
+        .tribute-author-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.25rem;
+        }
+
+        .tribute-author-relation {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* Final Section */
+        .section-final {
+            min-height: 100vh;
+        }
+
+        .section-final .photo-bg {
+            background-image: url('../elizabeth.jpg');
+            filter: brightness(0.25) grayscale(50%);
+        }
+
+        .section-final .photo-overlay {
+            background: radial-gradient(ellipse at center, transparent 0%, var(--bg) 80%);
+        }
+
+        .final-dates {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+        }
+
+        .final-message {
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .feature-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .facts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .photo-section {
+                min-height: 80vh;
+            }
+
+            .facts-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+
+            .feature-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="photo-section section-hero">
+        <div class="photo-bg"></div>
+        <div class="photo-overlay"></div>
+        <div class="photo-content">
+            <p class="hero-label">In Loving Memory</p>
+            <h1 class="hero-title">Elizabeth Bowles Haywood</h1>
+            <p class="hero-dates">1953 - 2026</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="photo-section section-quote">
+        <div class="photo-content">
+            <p class="quote-text">"She touched the lives of everyone she met with her warmth, wisdom, and unwavering love. Her spirit lives on in the countless hearts she touched."</p>
+            <p class="quote-author">A Life Well Lived</p>
+        </div>
+    </section>
+
+    <!-- Photo Feature -->
+    <section class="photo-section section-photo-feature">
+        <div class="photo-bg"></div>
+        <div class="photo-overlay"></div>
+        <div class="photo-content feature-content">
+            <div>
+                <h2 class="feature-title">A Beautiful Soul</h2>
+                <p class="feature-text">Elizabeth Bowles Haywood graced this world with her presence for 72 remarkable years. Born on October 4, 1953, she possessed a warmth that drew people to her like light.</p>
+            </div>
+            <div>
+                <h2 class="feature-title">Her Legacy</h2>
+                <p class="feature-text">She believed the truest measure of a life well-lived was found in the love shared and the hearts touched along the way. By that measure, her life was immeasurably rich.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story 1 -->
+    <section class="photo-section section-story section-story-1">
+        <div class="photo-content story-content">
+            <div class="story-number">I</div>
+            <h2 class="story-title">The Beginning</h2>
+            <p class="story-text">Elizabeth was blessed with a gentle spirit and an innate capacity for love that would define her remarkable life. From her earliest days, she radiated warmth and joy that touched everyone around her.</p>
+        </div>
+    </section>
+
+    <!-- Story 2 -->
+    <section class="photo-section section-story section-story-2">
+        <div class="photo-content story-content">
+            <div class="story-number">II</div>
+            <h2 class="story-title">A Life of Love</h2>
+            <p class="story-text">Her home was always filled with laughter, the aroma of home-cooked meals, and the warmth of genuine hospitality. Elizabeth believed that the most precious gifts in life were the moments shared with loved ones.</p>
+        </div>
+    </section>
+
+    <!-- Story 3 -->
+    <section class="photo-section section-story section-story-3">
+        <div class="photo-content story-content">
+            <div class="story-number">III</div>
+            <h2 class="story-title">Grace & Strength</h2>
+            <p class="story-text">Elizabeth faced life's challenges with grace and resilience, teaching those around her the power of perseverance. Her strength was quiet but profound, inspiring all who knew her.</p>
+        </div>
+    </section>
+
+    <!-- Facts -->
+    <section class="photo-section section-facts">
+        <div class="photo-content">
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <p class="fact-value">1953</p>
+                    <p class="fact-label">Born</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-value">72</p>
+                    <p class="fact-label">Years</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-value">&#8734;</p>
+                    <p class="fact-label">Love</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-value">2026</p>
+                    <p class="fact-label">Forever</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tributes -->
+    <section class="section-tributes">
+        <div class="tributes-header">
+            <h2>Remembrances</h2>
+        </div>
+        <div class="tributes-container">
+            <article class="tribute-item">
+                <p class="tribute-text">"Mom had a way of making everyone feel like they were the most important person in the room. Her love was unconditional and her wisdom was endless. I carry her with me every day."</p>
+                <p class="tribute-author-name">Sarah</p>
+                <p class="tribute-author-relation">Daughter</p>
+            </article>
+            <article class="tribute-item">
+                <p class="tribute-text">"Elizabeth was more than a friend; she was family. Her kindness knew no bounds, and her laughter was infectious. The world is dimmer without her light."</p>
+                <p class="tribute-author-name">Margaret</p>
+                <p class="tribute-author-relation">Lifelong Friend</p>
+            </article>
+            <article class="tribute-item">
+                <p class="tribute-text">"Grandma taught me that love is shown through actions, not just words. She showed up for everyone, every time. Her legacy lives on in all of us she loved."</p>
+                <p class="tribute-author-name">James</p>
+                <p class="tribute-author-relation">Grandson</p>
+            </article>
+            <article class="tribute-item">
+                <p class="tribute-text">"Elizabeth had the rare gift of making every gathering feel special. Her hospitality was legendary, and her home was always full of love and warmth."</p>
+                <p class="tribute-author-name">Robert</p>
+                <p class="tribute-author-relation">Neighbor</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Final -->
+    <section class="photo-section section-final">
+        <div class="photo-bg"></div>
+        <div class="photo-overlay"></div>
+        <div class="photo-content">
+            <p class="final-dates">1953 - 2026</p>
+            <p class="final-message">Forever in our hearts, eternally in our memories</p>
+        </div>
+    </section>
+</body>
+</html>
