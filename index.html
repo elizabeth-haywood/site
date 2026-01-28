@@ -21,7 +21,37 @@
     <meta name="twitter:description" content="In loving memory of Elizabeth Bowles Haywood (1953-2026). Celebrating her life, love, and legacy.">
     <meta name="twitter:image" content="https://elizabethhaywood.life/elizabeth.jpg">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Font Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Celebration of Liza",
+      "description": "A celebration of life for Elizabeth Bowles Haywood",
+      "startDate": "2026-02-07T15:00",
+      "endDate": "2026-02-07T18:00",
+      "location": {
+        "@type": "Place",
+        "name": "The Colonial Inn",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hillsborough",
+          "addressRegion": "NC",
+          "addressCountry": "US"
+        }
+      },
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled"
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -50,6 +80,22 @@
             background: var(--cream);
             color: var(--text-body);
             line-height: 1.8;
+        }
+
+        /* Skip Navigation Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--sage-dark);
+            color: var(--cream);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
         }
 
         /* Header */
@@ -531,18 +577,11 @@
             .quote-section {
                 padding: 6rem 8%;
             }
-
-            .story-section {
-                padding: 4rem 0;
-            }
-
-            .tribute-item {
-                padding: 2rem;
-            }
         }
     </style>
 </head>
 <body>
+    <a href="#story" class="skip-link">Skip to main content</a>
     <header>
         <div class="masthead">In Memoriam</div>
         <nav class="nav-links">
@@ -642,8 +681,8 @@
                 <li>Hors d'oeuvres and refreshments will be provided</li>
                 <li>Dress is informal</li>
             </ul>
-            <a href="https://forms.gle/DNjbASi5STxnVthU7" class="rsvp-link" target="_blank">Share a Memory</a>
-            <a href="https://colonialinn-nc.com/contact-us/" class="rsvp-link" target="_blank">Directions</a>
+            <a href="https://forms.gle/DNjbASi5STxnVthU7" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Share a Memory (opens in new window)">Share a Memory</a>
+            <a href="https://colonialinn-nc.com/contact-us/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Directions to The Colonial Inn (opens in new window)">Directions</a>
         </div>
     </section>
 
@@ -669,8 +708,8 @@
                 <li>Plot: O16-R1-P9</li>
             </ul>
             <p class="resting-place-note">Everyone is welcome to visit her any time. Bluestem is a nature preserve open to the public.</p>
-            <p class="resting-place-coordinates">GPS: <em>[coordinates TBD]</em></p>
-            <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank">Visit Bluestem</a>
+            <p class="resting-place-coordinates">GPS coordinates available on site</p>
+            <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Bluestem Cemetery website (opens in new window)">Visit Bluestem</a>
         </div>
 
         <div class="celebration-photo trail-map-container">
