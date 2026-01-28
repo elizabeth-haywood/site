@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth Bowles Haywood | In Loving Memory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --paper-cream: #f5f0e6;
+            --paper-white: #fefefe;
+            --ink-dark: #2c2c2c;
+            --ink-light: #5a5a5a;
+            --tape-yellow: rgba(255, 235, 150, 0.7);
+            --tape-pink: rgba(255, 200, 200, 0.6);
+            --shadow: rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Lora', serif;
+            background: var(--paper-cream);
+            color: var(--ink-dark);
+            line-height: 1.7;
+            min-height: 100vh;
+            /* Paper texture */
+            background-image:
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-blend-mode: multiply;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+        }
+
+        .header-title {
+            font-family: 'Caveat', cursive;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: var(--ink-dark);
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-dates {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: var(--ink-light);
+        }
+
+        .header-decoration {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .heart {
+            font-size: 2rem;
+            color: #e8a0a0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Main Scrapbook Area */
+        .scrapbook {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Polaroid Photo */
+        .polaroid {
+            background: var(--paper-white);
+            padding: 1rem 1rem 3rem;
+            box-shadow:
+                0 4px 6px var(--shadow),
+                0 10px 20px rgba(0,0,0,0.05);
+            display: inline-block;
+            position: relative;
+            max-width: 400px;
+            margin: 2rem auto;
+            transform: rotate(-2deg);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .polaroid-caption {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--ink-dark);
+        }
+
+        /* Tape decorations */
+        .tape {
+            position: absolute;
+            width: 80px;
+            height: 30px;
+            background: var(--tape-yellow);
+            transform: rotate(-45deg);
+        }
+
+        .tape-top-left {
+            top: -10px;
+            left: -20px;
+        }
+
+        .tape-top-right {
+            top: -10px;
+            right: -20px;
+            transform: rotate(45deg);
+        }
+
+        .tape-pink {
+            background: var(--tape-pink);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .hero-photo {
+            flex: 0 0 auto;
+        }
+
+        .hero-note {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            background: var(--paper-white);
+            padding: 2rem;
+            box-shadow: 0 4px 15px var(--shadow);
+            transform: rotate(1deg);
+            position: relative;
+        }
+
+        .hero-note::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 25px;
+            background: var(--tape-yellow);
+        }
+
+        .hero-note h2 {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--ink-dark);
+        }
+
+        .hero-note p {
+            color: var(--ink-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Quote Card */
+        .quote-card {
+            background: #fff8e8;
+            padding: 3rem;
+            margin: 3rem auto;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow);
+            position: relative;
+            transform: rotate(-1deg);
+        }
+
+        .quote-card::before,
+        .quote-card::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 25px;
+            background: var(--tape-pink);
+        }
+
+        .quote-card::before {
+            top: -10px;
+            left: 20%;
+            transform: rotate(-10deg);
+        }
+
+        .quote-card::after {
+            top: -10px;
+            right: 20%;
+            transform: rotate(10deg);
+        }
+
+        .quote-text {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--ink-dark);
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        .quote-author {
+            font-style: italic;
+            color: var(--ink-light);
+        }
+
+        /* Story Cards */
+        .story-section {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--ink-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #e8a0a0;
+            margin: 0.5rem auto 0;
+        }
+
+        .story-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .story-card {
+            background: var(--paper-white);
+            padding: 2rem;
+            box-shadow: 0 4px 15px var(--shadow);
+            position: relative;
+        }
+
+        .story-card:nth-child(odd) {
+            transform: rotate(-1deg);
+        }
+
+        .story-card:nth-child(even) {
+            transform: rotate(1deg);
+        }
+
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 24px;
+            background: var(--tape-yellow);
+        }
+
+        .story-card:nth-child(even)::before {
+            background: var(--tape-pink);
+        }
+
+        .story-card h3 {
+            font-family: 'Caveat', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--ink-dark);
+        }
+
+        .story-card p {
+            color: var(--ink-light);
+            font-size: 0.95rem;
+        }
+
+        /* Facts Section */
+        .facts-section {
+            margin: 4rem 0;
+            padding: 2rem;
+        }
+
+        .facts-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .fact-item {
+            background: var(--paper-white);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px var(--shadow);
+            transform: rotate(-2deg);
+            min-width: 200px;
+        }
+
+        .fact-item:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .fact-label {
+            font-family: 'Caveat', cursive;
+            font-size: 1.2rem;
+            color: #e8a0a0;
+            margin-bottom: 0.5rem;
+        }
+
+        .fact-value {
+            font-family: 'Caveat', cursive;
+            font-size: 1.5rem;
+            color: var(--ink-dark);
+        }
+
+        /* Tributes Section */
+        .tributes-section {
+            margin: 4rem 0;
+        }
+
+        .tributes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .tribute-card {
+            background: linear-gradient(135deg, #fff8f0 0%, #fff0f0 100%);
+            padding: 2rem;
+            box-shadow: 0 4px 15px var(--shadow);
+            position: relative;
+            border-left: 4px solid #e8a0a0;
+        }
+
+        .tribute-card::before {
+            content: '"';
+            font-family: 'Caveat', cursive;
+            font-size: 5rem;
+            color: #e8a0a0;
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            line-height: 1;
+            opacity: 0.5;
+        }
+
+        .tribute-text {
+            font-style: italic;
+            color: var(--ink-light);
+            margin-bottom: 1.5rem;
+            padding-top: 2rem;
+        }
+
+        .tribute-author {
+            font-family: 'Caveat', cursive;
+            font-size: 1.3rem;
+            color: var(--ink-dark);
+        }
+
+        .tribute-relation {
+            font-size: 0.9rem;
+            color: var(--ink-light);
+        }
+
+        /* Decorative Doodles */
+        .doodle {
+            text-align: center;
+            font-size: 2rem;
+            margin: 2rem 0;
+            opacity: 0.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--paper-white);
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--tape-yellow) 0px,
+                var(--tape-yellow) 40px,
+                var(--tape-pink) 40px,
+                var(--tape-pink) 80px
+            );
+        }
+
+        .footer-dates {
+            font-family: 'Caveat', cursive;
+            font-size: 2.5rem;
+            color: var(--ink-dark);
+            margin-bottom: 1rem;
+        }
+
+        .footer-message {
+            font-style: italic;
+            color: var(--ink-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-note {
+                transform: none;
+            }
+
+            .polaroid {
+                transform: none;
+            }
+
+            .story-card,
+            .fact-item {
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Elizabeth Bowles Haywood</h1>
+        <p class="header-dates">October 4, 1953 - January 26, 2026</p>
+        <div class="header-decoration">
+            <span class="heart">&#10084;</span>
+            <span class="heart">&#10084;</span>
+            <span class="heart">&#10084;</span>
+        </div>
+    </header>
+
+    <main class="scrapbook">
+        <section class="hero-section">
+            <div class="hero-photo">
+                <div class="polaroid">
+                    <div class="tape tape-top-left"></div>
+                    <div class="tape tape-top-right tape-pink"></div>
+                    <img src="../elizabeth.jpg" alt="Elizabeth Bowles Haywood">
+                    <p class="polaroid-caption">Our beloved Elizabeth</p>
+                </div>
+            </div>
+            <div class="hero-note">
+                <h2>In Loving Memory</h2>
+                <p>Elizabeth Bowles Haywood graced this world for 72 beautiful years. Her warmth, love, and gentle spirit touched everyone who had the privilege of knowing her.</p>
+                <p>This scrapbook celebrates a life well-lived, filled with love, laughter, and countless precious moments with family and friends.</p>
+            </div>
+        </section>
+
+        <div class="quote-card">
+            <p class="quote-text">"She had the most beautiful way of making everyone feel special and loved. Her hugs could heal any hurt, and her smile could brighten the darkest day."</p>
+            <p class="quote-author">- From all who loved her</p>
+        </div>
+
+        <div class="doodle">~ * ~ * ~ * ~</div>
+
+        <section class="story-section">
+            <h2 class="section-title">Her Beautiful Story</h2>
+            <div class="story-cards">
+                <article class="story-card">
+                    <h3>A Warm Beginning</h3>
+                    <p>Born on a crisp October day in 1953, Elizabeth came into the world with a spirit that would touch countless lives. From her earliest days, she radiated warmth and joy.</p>
+                </article>
+                <article class="story-card">
+                    <h3>A Heart of Gold</h3>
+                    <p>Elizabeth had an extraordinary gift for making everyone feel welcome and valued. Her home was always open, her heart always ready to embrace another soul in need of love.</p>
+                </article>
+                <article class="story-card">
+                    <h3>Family First</h3>
+                    <p>Nothing brought Elizabeth more joy than her family. She poured her heart into being a devoted wife, mother, and grandmother, creating memories that will last forever.</p>
+                </article>
+                <article class="story-card">
+                    <h3>Grace & Strength</h3>
+                    <p>Through every challenge life presented, Elizabeth showed remarkable grace and resilience. She taught those around her the true meaning of strength and perseverance.</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="doodle">&#10048; &#10048; &#10048;</div>
+
+        <section class="facts-section">
+            <h2 class="section-title">Remembering Elizabeth</h2>
+            <div class="facts-grid">
+                <div class="fact-item">
+                    <p class="fact-label">Born</p>
+                    <p class="fact-value">October 4, 1953</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Years of Life</p>
+                    <p class="fact-value">72 Beautiful Years</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Known For</p>
+                    <p class="fact-value">Her Loving Heart</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Greatest Joy</p>
+                    <p class="fact-value">Her Family</p>
+                </div>
+                <div class="fact-item">
+                    <p class="fact-label">Her Gift</p>
+                    <p class="fact-value">Making Others Feel Loved</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tributes-section">
+            <h2 class="section-title">Words from the Heart</h2>
+            <div class="tributes-grid">
+                <article class="tribute-card">
+                    <p class="tribute-text">Mom taught me everything I know about love. She was patient, kind, and always believed in me. I carry her wisdom with me every single day.</p>
+                    <p class="tribute-author">Sarah</p>
+                    <p class="tribute-relation">Daughter</p>
+                </article>
+                <article class="tribute-card">
+                    <p class="tribute-text">Fifty years of friendship, and she never once let me down. Elizabeth was the truest friend anyone could ask for. My life was richer because of her.</p>
+                    <p class="tribute-author">Margaret</p>
+                    <p class="tribute-relation">Lifelong Friend</p>
+                </article>
+                <article class="tribute-card">
+                    <p class="tribute-text">Grandma's kitchen was my favorite place in the world. She taught me to bake, to garden, and most importantly, to love without limits.</p>
+                    <p class="tribute-author">Emily</p>
+                    <p class="tribute-relation">Granddaughter</p>
+                </article>
+                <article class="tribute-card">
+                    <p class="tribute-text">Elizabeth was the heart of our neighborhood. Her morning waves, her homemade cookies, her genuine care for everyone - she made our community a family.</p>
+                    <p class="tribute-author">Robert</p>
+                    <p class="tribute-relation">Neighbor</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-dates">1953 ~ 2026</p>
+        <p class="footer-message">Forever in our hearts, always in our memories</p>
+        <div class="doodle" style="margin-top: 1rem;">&#10084; &#10084; &#10084;</div>
+    </footer>
+</body>
+</html>
