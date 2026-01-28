@@ -1,12 +1,295 @@
 <!DOCTYPE html>
-<html><head>
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Coming Soon</title>
-  </head>
-<body class="loading align-content-center-vertical content">
-  <div class="footer text-align-center">
-    <p>Under construction.<span class="line-break"> </span>Please check back for an update soon.
-  </div>
-</body></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In loving memory of Elizabeth Bowles Haywood (1953-2026). A celebration of her life, family, and legacy.">
+    <meta property="og:title" content="In Memory of Elizabeth Bowles Haywood">
+    <meta property="og:description" content="October 4, 1953 – January 26, 2026">
+    <meta property="og:image" content="https://elizabethhaywood.life/elizabeth.jpg">
+    <meta property="og:type" content="profile">
+    <title>In Memory of Elizabeth Bowles Haywood</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #3a3a3a;
+            background-color: #faf9f7;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 80px 0 60px;
+            background: linear-gradient(to bottom, #f5f3f0, #faf9f7);
+        }
+
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            letter-spacing: 0.02em;
+            margin-bottom: 16px;
+        }
+
+        .dates {
+            font-size: 1.1rem;
+            color: #6b6b6b;
+            letter-spacing: 0.05em;
+        }
+
+        /* Photo */
+        .photo-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .photo-section img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Main content sections */
+        section {
+            padding: 50px 0;
+            border-top: 1px solid #e8e6e3;
+        }
+
+        section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .placeholder {
+            background-color: #fff8dc;
+            padding: 16px 20px;
+            border-radius: 4px;
+            border-left: 3px solid #d4a574;
+            color: #8b7355;
+            font-style: italic;
+            margin: 16px 0;
+        }
+
+        /* Quote section */
+        .quote-section {
+            background-color: #f5f3f0;
+            text-align: center;
+        }
+
+        blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 16px;
+            font-size: 1rem;
+            font-style: normal;
+            color: #888;
+        }
+
+        /* Life story */
+        .life-story p {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* Memories */
+        .memory {
+            background-color: #fff;
+            padding: 24px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .memory-author {
+            font-weight: 400;
+            color: #666;
+            margin-top: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* Details list */
+        .details-list {
+            list-style: none;
+        }
+
+        .details-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .details-list li:last-child {
+            border-bottom: none;
+        }
+
+        .details-list strong {
+            font-weight: 400;
+            color: #666;
+            display: inline-block;
+            width: 180px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #f5f3f0;
+            border-top: 1px solid #e8e6e3;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .flower {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .photo-section img {
+                max-width: 300px;
+            }
+
+            .details-list strong {
+                display: block;
+                width: auto;
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Elizabeth Bowles Haywood</h1>
+            <p class="dates">October 4, 1953 &mdash; January 26, 2026</p>
+        </div>
+    </header>
+
+    <section class="photo-section">
+        <div class="container">
+            <img src="elizabeth.jpg" alt="Portrait photograph of Elizabeth Bowles Haywood">
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <blockquote>
+                "[A favorite quote, verse, or saying that Elizabeth loved or that captures her spirit]"
+                <cite>&mdash; [Attribution]</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="life-story">
+        <div class="container">
+            <h2>Her Life</h2>
+
+            <p class="placeholder">[Write about Elizabeth's early life &mdash; where she was born, her childhood, her family growing up, formative experiences that shaped who she became.]</p>
+
+            <p class="placeholder">[Write about her education, career, passions, and accomplishments. What did she dedicate her life to? What was she proud of?]</p>
+
+            <p class="placeholder">[Write about her family life &mdash; her marriage, her children, her role as a mother, grandmother, or other family roles that were important to her.]</p>
+
+            <p class="placeholder">[Write about what brought her joy &mdash; her hobbies, interests, the little things she loved. What made her laugh? What did she look forward to?]</p>
+
+            <p>Elizabeth faced her ALS diagnosis with remarkable courage. In the seven months that followed, she showed the same strength and grace that had defined her entire life. She passed peacefully on January 26, 2026, surrounded by the love of her family.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Remembering Elizabeth</h2>
+
+            <ul class="details-list">
+                <li><strong>Born</strong> October 4, 1953 in Elkin, NC along the Yadkin River</li>
+                <li><strong>Parents</strong> Mary Elizabeth Bowles and Charles Lewis Haywood III</li>
+                <li><strong>Siblings</strong> Charlie, Marguerite, and John</li>
+                <li><strong>Married</strong> Douglas Carpenter (previously wedded to Jim Black and James Stoertz)</li>
+                <li><strong>Children</strong> Nassar, Aaron, and Rosemary</li>
+                <li><strong>Grandchildren</strong> Jackson, Winslow, Finnigan, Apollo, Tennyson, Max, and Alexzandria</li>
+                <li><strong>Education</strong> Chatham Hall (1971); Duke University (Nursing); Antioch (Early Childhood Education); UNC (Graduate School)</li>
+                <li><strong>Career</strong> [Profession or life's work]</li>
+                <li><strong>Faith</strong> [Church or spiritual community, if applicable]</li>
+                <li><strong>Resided</strong> [Places she called home]</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Memories &amp; Tributes</h2>
+
+            <div class="memory">
+                <p class="placeholder">[Share a cherished memory, a story that captures who Elizabeth was, or words about what she meant to you.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+
+            <div class="memory">
+                <p class="placeholder">[Another memory or tribute from a family member or friend.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+
+            <div class="memory">
+                <p class="placeholder">[Add as many memories as you'd like. Each one helps paint the picture of a life well-lived.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Service Information</h2>
+            <p class="placeholder">[Details about memorial service, funeral, or celebration of life &mdash; date, time, location, and any special requests such as donations in lieu of flowers.]</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="flower">&#10047;</div>
+            <p>Forever in our hearts</p>
+            <p style="margin-top: 8px;">Elizabeth Bowles Haywood</p>
+        </div>
+    </footer>
+</body>
+</html>
