@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 2: Sunset Warmth | Elizabeth Bowles Haywood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #4a3f3a;
+            background: #fffbf7;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header with sunset gradient */
+        header {
+            text-align: center;
+            padding: 90px 0 80px;
+            background: linear-gradient(180deg,
+                #ffecd2 0%,
+                #fcb69f 40%,
+                #ff9a9e 70%,
+                #ffecd2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(180deg, transparent, #fffbf7);
+        }
+
+        header h1 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: #5c3d2e;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(255,255,255,0.5);
+        }
+
+        .dates {
+            font-size: 1.2rem;
+            color: #7a5548;
+            letter-spacing: 0.15em;
+            font-weight: 400;
+        }
+
+        /* Photo with warm glow */
+        .photo-section {
+            text-align: center;
+            padding: 50px 0 60px;
+            margin-top: -60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .photo-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .photo-container::before {
+            content: '';
+            position: absolute;
+            inset: -15px;
+            background: linear-gradient(135deg, #fcb69f 0%, #ff9a9e 50%, #ffecd2 100%);
+            border-radius: 50%;
+            filter: blur(30px);
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .photo-section img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            box-shadow: 0 12px 40px rgba(156, 89, 63, 0.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            color: #5c3d2e;
+            margin-bottom: 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '~';
+            display: block;
+            font-size: 2rem;
+            color: #e8a598;
+            margin-top: 12px;
+        }
+
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, #fff5f0 0%, #ffe8e0 100%);
+            padding: 60px 40px;
+            border-radius: 0;
+            margin: 0;
+            border-top: 3px solid #fcb69f;
+            border-bottom: 3px solid #fcb69f;
+        }
+
+        blockquote {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #6d4c41;
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 24px;
+            font-size: 1rem;
+            font-style: normal;
+            color: #c98a7d;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Life story */
+        .life-story p {
+            margin-bottom: 24px;
+            font-size: 1.05rem;
+        }
+
+        .placeholder {
+            background: linear-gradient(90deg, #fff5f0, #fff);
+            padding: 20px 24px;
+            border-radius: 12px;
+            border-left: 4px solid #e8a598;
+            color: #8d6e63;
+            font-style: italic;
+        }
+
+        /* Details */
+        .details-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 40px rgba(156, 89, 63, 0.08);
+        }
+
+        .details-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 8px 40px;
+        }
+
+        .details-list li {
+            padding: 16px 0;
+            border-bottom: 1px dashed #f0d9d3;
+        }
+
+        .details-list strong {
+            font-weight: 500;
+            color: #c98a7d;
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 4px;
+        }
+
+        /* Memories */
+        .memory {
+            background: linear-gradient(135deg, #fff 0%, #fff9f7 100%);
+            padding: 32px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(156, 89, 63, 0.06);
+            border: 1px solid #fce4dc;
+            position: relative;
+        }
+
+        .memory::before {
+            content: '"';
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 4rem;
+            color: #fcd5c9;
+            line-height: 1;
+        }
+
+        .memory p:first-child {
+            padding-top: 24px;
+        }
+
+        .memory-author {
+            font-weight: 500;
+            color: #c98a7d;
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg,
+                #fffbf7 0%,
+                #ffecd2 30%,
+                #fcb69f 70%,
+                #ff9a9e 100%);
+        }
+
+        .sun-icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        footer p {
+            color: #5c3d2e;
+            font-size: 1.1rem;
+        }
+
+        footer .name {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.4rem;
+            margin-top: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .photo-section img {
+                max-width: 260px;
+            }
+
+            .details-section {
+                padding: 24px;
+            }
+
+            .quote-section {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Elizabeth Bowles Haywood</h1>
+            <p class="dates">October 4, 1953 &mdash; January 26, 2026</p>
+        </div>
+    </header>
+
+    <section class="photo-section">
+        <div class="container">
+            <div class="photo-container">
+                <img src="../elizabeth.jpg" alt="Portrait photograph of Elizabeth Bowles Haywood">
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <blockquote>
+                "Every sunset brings the promise of a new dawn."
+                <cite>&mdash; Ralph Waldo Emerson</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="life-story">
+        <div class="container">
+            <h2>Her Life</h2>
+            <p class="placeholder">[Write about Elizabeth's early life — where she was born, her childhood, her family growing up, formative experiences that shaped who she became.]</p>
+            <p class="placeholder">[Write about her education, career, passions, and accomplishments. What did she dedicate her life to? What was she proud of?]</p>
+            <p class="placeholder">[Write about her family life — her marriage, her children, her role as a mother, grandmother, or other family roles that were important to her.]</p>
+            <p>Elizabeth faced her ALS diagnosis with remarkable courage. In the seven months that followed, she showed the same strength and grace that had defined her entire life. She passed peacefully on January 26, 2026, surrounded by the love of her family.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Remembering Elizabeth</h2>
+            <div class="details-section">
+                <ul class="details-list">
+                    <li><strong>Born</strong> October 4, 1953 in Elkin, NC</li>
+                    <li><strong>Parents</strong> Mary Elizabeth Bowles and Charles Lewis Haywood III</li>
+                    <li><strong>Siblings</strong> Charlie, Marguerite, and John</li>
+                    <li><strong>Married</strong> Douglas Carpenter</li>
+                    <li><strong>Children</strong> Nassar, Aaron, and Rosemary</li>
+                    <li><strong>Grandchildren</strong> Jackson, Winslow, Finnigan, Apollo, Tennyson, Max, and Alexzandria</li>
+                    <li><strong>Education</strong> Chatham Hall; Duke University; Antioch; UNC</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Memories &amp; Tributes</h2>
+            <div class="memory">
+                <p class="placeholder">[Share a cherished memory, a story that captures who Elizabeth was, or words about what she meant to you.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+            <div class="memory">
+                <p class="placeholder">[Another memory or tribute from a family member or friend.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="sun-icon">🌅</div>
+            <p>Forever in our hearts</p>
+            <p class="name">Elizabeth Bowles Haywood</p>
+        </div>
+    </footer>
+</body>
+</html>

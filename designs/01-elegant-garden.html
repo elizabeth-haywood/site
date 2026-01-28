@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 1: Elegant Garden | Elizabeth Bowles Haywood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #2d3e2f;
+            background: linear-gradient(135deg, #f8faf6 0%, #eef4e8 50%, #f5f9f2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Decorative leaf borders */
+        .leaf-border {
+            position: relative;
+        }
+
+        .leaf-border::before,
+        .leaf-border::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 Q70 30 50 50 Q30 30 50 10' fill='%234a7c4e' opacity='0.15'/%3E%3Cpath d='M30 40 Q50 60 30 80 Q10 60 30 40' fill='%236b9e6f' opacity='0.1'/%3E%3C/svg%3E") no-repeat;
+            pointer-events: none;
+        }
+
+        .leaf-border::before {
+            top: 20px;
+            left: 20px;
+        }
+
+        .leaf-border::after {
+            bottom: 20px;
+            right: 20px;
+            transform: rotate(180deg);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 0 70px;
+            background: linear-gradient(180deg, rgba(74, 124, 78, 0.08) 0%, transparent 100%);
+            border-bottom: 2px solid rgba(74, 124, 78, 0.15);
+        }
+
+        .botanical-icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            filter: hue-rotate(60deg);
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 500;
+            color: #2d4a30;
+            letter-spacing: 0.03em;
+            margin-bottom: 20px;
+        }
+
+        .dates {
+            font-size: 1.15rem;
+            color: #5a7d5e;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        /* Photo */
+        .photo-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .photo-frame {
+            display: inline-block;
+            padding: 12px;
+            background: linear-gradient(135deg, #d4e4d6, #e8f0e4);
+            border-radius: 8px;
+            box-shadow:
+                0 8px 32px rgba(45, 74, 48, 0.15),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+        }
+
+        .photo-section img {
+            max-width: 420px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #6b9e6f, transparent);
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            color: #2d4a30;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, rgba(74, 124, 78, 0.06) 0%, rgba(107, 158, 111, 0.04) 100%);
+            border-radius: 16px;
+            margin: 40px 24px;
+            padding: 50px 40px;
+        }
+
+        blockquote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            color: #3d5a40;
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 20px;
+            font-size: 1rem;
+            font-style: normal;
+            color: #6b9e6f;
+        }
+
+        /* Life story */
+        .life-story p {
+            margin-bottom: 24px;
+            text-align: left;
+            font-size: 1.05rem;
+        }
+
+        .placeholder {
+            background: linear-gradient(135deg, #fff 0%, #f8faf6 100%);
+            padding: 20px 24px;
+            border-radius: 8px;
+            border-left: 4px solid #6b9e6f;
+            color: #5a7d5e;
+            font-style: italic;
+        }
+
+        /* Details list */
+        .details-list {
+            list-style: none;
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 32px;
+            box-shadow: 0 4px 20px rgba(45, 74, 48, 0.08);
+        }
+
+        .details-list li {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(107, 158, 111, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .details-list li:last-child {
+            border-bottom: none;
+        }
+
+        .details-list strong {
+            font-weight: 500;
+            color: #4a7c4e;
+            width: 160px;
+            flex-shrink: 0;
+        }
+
+        /* Memories */
+        .memory {
+            background: #fff;
+            padding: 28px 32px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 16px rgba(45, 74, 48, 0.06);
+            border: 1px solid rgba(107, 158, 111, 0.1);
+        }
+
+        .memory-author {
+            font-weight: 500;
+            color: #6b9e6f;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 70px 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(74, 124, 78, 0.08) 100%);
+            border-top: 2px solid rgba(74, 124, 78, 0.15);
+        }
+
+        .footer-flower {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        footer p {
+            color: #5a7d5e;
+            font-size: 1rem;
+        }
+
+        footer .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #2d4a30;
+            margin-top: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+
+            .photo-section img {
+                max-width: 280px;
+            }
+
+            .details-list strong {
+                width: 100%;
+                margin-bottom: 4px;
+            }
+
+            .quote-section {
+                margin: 20px 0;
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body class="leaf-border">
+    <header>
+        <div class="container">
+            <div class="botanical-icon">🌿</div>
+            <h1>Elizabeth Bowles Haywood</h1>
+            <p class="dates">October 4, 1953 &mdash; January 26, 2026</p>
+        </div>
+    </header>
+
+    <section class="photo-section">
+        <div class="container">
+            <div class="photo-frame">
+                <img src="../elizabeth.jpg" alt="Portrait photograph of Elizabeth Bowles Haywood">
+            </div>
+        </div>
+    </section>
+
+    <div class="quote-section">
+        <div class="container">
+            <blockquote>
+                "And into the forest I go, to lose my mind and find my soul."
+                <cite>&mdash; John Muir</cite>
+            </blockquote>
+        </div>
+    </div>
+
+    <section class="life-story">
+        <div class="container">
+            <h2>Her Life</h2>
+            <p class="placeholder">[Write about Elizabeth's early life — where she was born, her childhood, her family growing up, formative experiences that shaped who she became.]</p>
+            <p class="placeholder">[Write about her education, career, passions, and accomplishments. What did she dedicate her life to? What was she proud of?]</p>
+            <p class="placeholder">[Write about her family life — her marriage, her children, her role as a mother, grandmother, or other family roles that were important to her.]</p>
+            <p>Elizabeth faced her ALS diagnosis with remarkable courage. In the seven months that followed, she showed the same strength and grace that had defined her entire life. She passed peacefully on January 26, 2026, surrounded by the love of her family.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Remembering Elizabeth</h2>
+            <ul class="details-list">
+                <li><strong>Born</strong> October 4, 1953 in Elkin, NC along the Yadkin River</li>
+                <li><strong>Parents</strong> Mary Elizabeth Bowles and Charles Lewis Haywood III</li>
+                <li><strong>Siblings</strong> Charlie, Marguerite, and John</li>
+                <li><strong>Married</strong> Douglas Carpenter</li>
+                <li><strong>Children</strong> Nassar, Aaron, and Rosemary</li>
+                <li><strong>Grandchildren</strong> Jackson, Winslow, Finnigan, Apollo, Tennyson, Max, and Alexzandria</li>
+                <li><strong>Education</strong> Chatham Hall (1971); Duke University; Antioch; UNC</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Memories &amp; Tributes</h2>
+            <div class="memory">
+                <p class="placeholder">[Share a cherished memory, a story that captures who Elizabeth was, or words about what she meant to you.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+            <div class="memory">
+                <p class="placeholder">[Another memory or tribute from a family member or friend.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-flower">🌸</div>
+            <p>Forever in our hearts</p>
+            <p class="name">Elizabeth Bowles Haywood</p>
+        </div>
+    </footer>
+</body>
+</html>

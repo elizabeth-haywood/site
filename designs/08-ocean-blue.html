@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 8: Ocean Blue | Elizabeth Bowles Haywood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            line-height: 1.85;
+            color: #3a4a5c;
+            background: #f5f9fc;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* Header with ocean gradient */
+        header {
+            text-align: center;
+            padding: 110px 0 90px;
+            background: linear-gradient(180deg,
+                #0a4d68 0%,
+                #1a6e8e 25%,
+                #3d9ec0 50%,
+                #7cc3dc 75%,
+                #b8dff0 90%,
+                #f5f9fc 100%);
+            color: #fff;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60'%3E%3Cpath d='M0,30 Q150,60 300,30 T600,30 T900,30 T1200,30 L1200,60 L0,60 Z' fill='%23f5f9fc'/%3E%3C/svg%3E") no-repeat bottom;
+            background-size: cover;
+        }
+
+        .wave-icon {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+
+        header h1 {
+            font-family: 'Cardo', serif;
+            font-size: 3.2rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(10, 77, 104, 0.3);
+        }
+
+        .dates {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            letter-spacing: 0.12em;
+            font-weight: 300;
+        }
+
+        /* Photo */
+        .photo-section {
+            text-align: center;
+            padding: 50px 0 60px;
+        }
+
+        .photo-ocean-frame {
+            display: inline-block;
+            padding: 10px;
+            background: linear-gradient(145deg, #b8dff0, #7cc3dc);
+            border-radius: 8px;
+            box-shadow:
+                0 20px 60px rgba(10, 77, 104, 0.15),
+                inset 0 1px 0 rgba(255,255,255,0.5);
+        }
+
+        .photo-section img {
+            max-width: 390px;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        /* Sections */
+        section {
+            padding: 65px 0;
+        }
+
+        section h2 {
+            font-family: 'Cardo', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #1a6e8e;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, #e8f4f9 0%, #d5ebf5 50%, #e8f4f9 100%);
+            padding: 65px 40px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3d9ec0, #1a6e8e, #3d9ec0);
+        }
+
+        .quote-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3d9ec0, #1a6e8e, #3d9ec0);
+        }
+
+        blockquote {
+            font-family: 'Cardo', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #2a5a72;
+            text-align: center;
+            max-width: 620px;
+            margin: 0 auto;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 24px;
+            font-size: 1rem;
+            font-style: normal;
+            color: #5a9ab8;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Life story */
+        .life-story p {
+            margin-bottom: 26px;
+            font-size: 1.05rem;
+        }
+
+        .placeholder {
+            background: #fff;
+            padding: 22px 26px;
+            border-radius: 8px;
+            border-left: 4px solid #5aafcf;
+            color: #5a8a9e;
+            font-style: italic;
+            box-shadow: 0 2px 12px rgba(10, 77, 104, 0.05);
+        }
+
+        /* Details */
+        .details-ocean {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(10, 77, 104, 0.08);
+        }
+
+        .details-header {
+            background: linear-gradient(135deg, #1a6e8e, #3d9ec0);
+            color: #fff;
+            padding: 20px 28px;
+            font-family: 'Cardo', serif;
+            font-size: 1.1rem;
+        }
+
+        .details-list {
+            list-style: none;
+        }
+
+        .details-list li {
+            padding: 18px 28px;
+            border-bottom: 1px solid #e8f4f9;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .details-list li:last-child {
+            border-bottom: none;
+        }
+
+        .details-list li:nth-child(even) {
+            background: #fafcfd;
+        }
+
+        .details-list strong {
+            font-weight: 500;
+            color: #3d9ec0;
+            width: 150px;
+            flex-shrink: 0;
+        }
+
+        /* Memories */
+        .memory {
+            background: #fff;
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 6px 24px rgba(10, 77, 104, 0.06);
+            border-top: 3px solid #5aafcf;
+        }
+
+        .memory-author {
+            font-weight: 500;
+            color: #3d9ec0;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg,
+                #f5f9fc 0%,
+                #d5ebf5 30%,
+                #b8dff0 60%,
+                #7cc3dc 100%);
+        }
+
+        .shell-icon {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        footer p {
+            color: #2a5a72;
+            font-size: 1.05rem;
+        }
+
+        footer .name {
+            font-family: 'Cardo', serif;
+            font-size: 1.4rem;
+            color: #0a4d68;
+            margin-top: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            .photo-section img {
+                max-width: 280px;
+            }
+
+            .details-list li {
+                flex-direction: column;
+            }
+
+            .details-list strong {
+                width: auto;
+                margin-bottom: 4px;
+            }
+
+            .quote-section {
+                padding: 45px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="wave-icon">🌊</div>
+            <h1>Elizabeth Bowles Haywood</h1>
+            <p class="dates">October 4, 1953 &mdash; January 26, 2026</p>
+        </div>
+    </header>
+
+    <section class="photo-section">
+        <div class="container">
+            <div class="photo-ocean-frame">
+                <img src="../elizabeth.jpg" alt="Portrait photograph of Elizabeth Bowles Haywood">
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <blockquote>
+                "The sea, once it casts its spell, holds one in its net of wonder forever."
+                <cite>&mdash; Jacques Cousteau</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="life-story">
+        <div class="container">
+            <h2>Her Life</h2>
+            <p class="placeholder">[Write about Elizabeth's early life — where she was born, her childhood, her family growing up, formative experiences that shaped who she became.]</p>
+            <p class="placeholder">[Write about her education, career, passions, and accomplishments. What did she dedicate her life to? What was she proud of?]</p>
+            <p class="placeholder">[Write about her family life — her marriage, her children, her role as a mother, grandmother, or other family roles that were important to her.]</p>
+            <p>Elizabeth faced her ALS diagnosis with remarkable courage. In the seven months that followed, she showed the same strength and grace that had defined her entire life. She passed peacefully on January 26, 2026, surrounded by the love of her family.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Remembering Elizabeth</h2>
+            <div class="details-ocean">
+                <ul class="details-list">
+                    <li><strong>Born</strong> October 4, 1953 in Elkin, NC along the Yadkin River</li>
+                    <li><strong>Parents</strong> Mary Elizabeth Bowles and Charles Lewis Haywood III</li>
+                    <li><strong>Siblings</strong> Charlie, Marguerite, and John</li>
+                    <li><strong>Married</strong> Douglas Carpenter</li>
+                    <li><strong>Children</strong> Nassar, Aaron, and Rosemary</li>
+                    <li><strong>Grandchildren</strong> Jackson, Winslow, Finnigan, Apollo, Tennyson, Max, Alexzandria</li>
+                    <li><strong>Education</strong> Chatham Hall (1971); Duke University; Antioch; UNC</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Memories &amp; Tributes</h2>
+            <div class="memory">
+                <p class="placeholder">[Share a cherished memory, a story that captures who Elizabeth was, or words about what she meant to you.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+            <div class="memory">
+                <p class="placeholder">[Another memory or tribute from a family member or friend.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="shell-icon">🐚</div>
+            <p>Forever in our hearts</p>
+            <p class="name">Elizabeth Bowles Haywood</p>
+        </div>
+    </footer>
+</body>
+</html>

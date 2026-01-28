@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 7: Lavender Fields | Elizabeth Bowles Haywood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            line-height: 1.85;
+            color: #524663;
+            background: linear-gradient(180deg, #f8f6fb 0%, #fff 50%, #faf8fc 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 100px 0 70px;
+            background: linear-gradient(180deg,
+                #e8e0f0 0%,
+                #f0eaf6 50%,
+                #f8f6fb 100%);
+            position: relative;
+        }
+
+        .lavender-sprigs {
+            font-size: 2rem;
+            margin-bottom: 28px;
+            letter-spacing: 0.5em;
+        }
+
+        header h1 {
+            font-family: 'Gilda Display', serif;
+            font-size: 3.2rem;
+            font-weight: 400;
+            color: #4a3b5c;
+            letter-spacing: 0.02em;
+            margin-bottom: 20px;
+        }
+
+        .dates {
+            font-size: 1.1rem;
+            color: #8b7a9e;
+            letter-spacing: 0.12em;
+            font-weight: 300;
+        }
+
+        /* Photo */
+        .photo-section {
+            text-align: center;
+            padding: 50px 0 60px;
+        }
+
+        .photo-soft-frame {
+            display: inline-block;
+            padding: 12px;
+            background: linear-gradient(135deg, #e8e0f0, #f0eaf6);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            box-shadow:
+                0 20px 50px rgba(106, 90, 130, 0.12),
+                0 8px 20px rgba(106, 90, 130, 0.08);
+        }
+
+        .photo-section img {
+            max-width: 380px;
+            width: 100%;
+            height: auto;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            display: block;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            font-family: 'Gilda Display', serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            color: #4a3b5c;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, #f0eaf6 0%, #e8e0f0 50%, #f5f0fa 100%);
+            padding: 65px 40px;
+            margin: 40px 0;
+            border-radius: 100px 0 100px 0;
+            position: relative;
+        }
+
+        .quote-section::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid rgba(138, 118, 166, 0.2);
+            border-radius: 90px 0 90px 0;
+            pointer-events: none;
+        }
+
+        blockquote {
+            font-family: 'Gilda Display', serif;
+            font-size: 1.5rem;
+            color: #5a4a6d;
+            text-align: center;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 24px;
+            font-size: 0.95rem;
+            color: #9b8aad;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+        }
+
+        /* Life story */
+        .life-story p {
+            margin-bottom: 24px;
+            font-size: 1.02rem;
+        }
+
+        .placeholder {
+            background: #fff;
+            padding: 22px 26px;
+            border-radius: 20px;
+            border: 1px solid #e8e0f0;
+            border-left: 4px solid #a890c0;
+            color: #7a6a8d;
+            font-style: italic;
+        }
+
+        /* Details */
+        .details-lavender {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+        }
+
+        .detail-item {
+            background: #fff;
+            padding: 22px 26px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(106, 90, 130, 0.06);
+            border: 1px solid #f0eaf6;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .detail-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(106, 90, 130, 0.1);
+        }
+
+        .detail-item strong {
+            display: block;
+            font-weight: 400;
+            color: #a890c0;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 6px;
+        }
+
+        /* Memories */
+        .memory {
+            background: #fff;
+            padding: 32px;
+            border-radius: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 6px 24px rgba(106, 90, 130, 0.06);
+            border: 1px solid #f0eaf6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .memory::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #c4b0d9, #a890c0, #c4b0d9);
+        }
+
+        .memory-author {
+            font-weight: 400;
+            color: #9b8aad;
+            margin-top: 16px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(180deg,
+                #faf8fc 0%,
+                #f0eaf6 50%,
+                #e8e0f0 100%);
+        }
+
+        .lavender-icon {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        footer p {
+            color: #8b7a9e;
+            font-size: 1rem;
+        }
+
+        footer .name {
+            font-family: 'Gilda Display', serif;
+            font-size: 1.35rem;
+            color: #4a3b5c;
+            margin-top: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+
+            .photo-section img {
+                max-width: 260px;
+            }
+
+            .quote-section {
+                padding: 45px 24px;
+                border-radius: 40px 0 40px 0;
+            }
+
+            .quote-section::before {
+                border-radius: 30px 0 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="lavender-sprigs">💜 💜 💜</div>
+            <h1>Elizabeth Bowles Haywood</h1>
+            <p class="dates">October 4, 1953 &mdash; January 26, 2026</p>
+        </div>
+    </header>
+
+    <section class="photo-section">
+        <div class="container">
+            <div class="photo-soft-frame">
+                <img src="../elizabeth.jpg" alt="Portrait photograph of Elizabeth Bowles Haywood">
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-section">
+        <div class="container">
+            <blockquote>
+                "Peace comes from within. Do not seek it without."
+                <cite>&mdash; Buddha</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section class="life-story">
+        <div class="container">
+            <h2>Her Life</h2>
+            <p class="placeholder">[Write about Elizabeth's early life — where she was born, her childhood, her family growing up, formative experiences that shaped who she became.]</p>
+            <p class="placeholder">[Write about her education, career, passions, and accomplishments. What did she dedicate her life to? What was she proud of?]</p>
+            <p class="placeholder">[Write about her family life — her marriage, her children, her role as a mother, grandmother, or other family roles that were important to her.]</p>
+            <p>Elizabeth faced her ALS diagnosis with remarkable courage. In the seven months that followed, she showed the same strength and grace that had defined her entire life. She passed peacefully on January 26, 2026, surrounded by the love of her family.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Remembering Elizabeth</h2>
+            <div class="details-lavender">
+                <div class="detail-item"><strong>Born</strong> October 4, 1953 in Elkin, NC</div>
+                <div class="detail-item"><strong>Parents</strong> Mary Elizabeth Bowles & Charles Lewis Haywood III</div>
+                <div class="detail-item"><strong>Siblings</strong> Charlie, Marguerite, and John</div>
+                <div class="detail-item"><strong>Married</strong> Douglas Carpenter</div>
+                <div class="detail-item"><strong>Children</strong> Nassar, Aaron, and Rosemary</div>
+                <div class="detail-item"><strong>Grandchildren</strong> Jackson, Winslow, Finnigan, Apollo, Tennyson, Max, Alexzandria</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Memories &amp; Tributes</h2>
+            <div class="memory">
+                <p class="placeholder">[Share a cherished memory, a story that captures who Elizabeth was, or words about what she meant to you.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+            <div class="memory">
+                <p class="placeholder">[Another memory or tribute from a family member or friend.]</p>
+                <p class="memory-author">&mdash; [Name and relationship]</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="lavender-icon">🪻</div>
+            <p>Forever in our hearts</p>
+            <p class="name">Elizabeth Bowles Haywood</p>
+        </div>
+    </footer>
+</body>
+</html>
