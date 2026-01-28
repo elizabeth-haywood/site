@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Burial Service | Elizabeth Bowles Haywood</title>
+    <title>Family Burial Service | Elizabeth Bowles Haywood</title>
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Favicon -->
@@ -46,7 +46,7 @@
 
         /* Header */
         header {
-            padding: 2rem 4%;
+            padding: clamp(1rem, 2.5vw, 2rem) 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -83,13 +83,13 @@
         /* Hero Photo */
         .hero-photo {
             width: 100%;
-            max-height: 50vh;
+            max-height: clamp(35vh, 40vw, 50vh);
             overflow: hidden;
         }
 
         .hero-photo img {
             width: 100%;
-            height: 50vh;
+            height: clamp(35vh, 40vw, 50vh);
             object-fit: cover;
             object-position: top;
             display: block;
@@ -97,7 +97,7 @@
 
         /* Page Title */
         .page-title {
-            padding: 5rem 4%;
+            padding: clamp(1.5rem, 4vw, 3rem) 4% clamp(0.75rem, 2vw, 1.5rem);
             text-align: center;
             background: var(--bg-white);
         }
@@ -107,7 +107,7 @@
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 400;
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .sage-divider {
@@ -115,7 +115,7 @@
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem 0;
+            margin: 1rem 0;
         }
 
         .sage-divider span {
@@ -133,7 +133,7 @@
         .intro-section {
             max-width: 700px;
             margin: 0 auto;
-            padding: 0 4% 4rem;
+            padding: 0 5% clamp(1.25rem, 3vw, 2rem);
             text-align: center;
         }
 
@@ -142,8 +142,8 @@
             font-size: 1.2rem;
             font-style: italic;
             color: var(--text-dark);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
         }
 
         .intro-section p.private-note {
@@ -155,7 +155,7 @@
 
         /* Details Card */
         .details-section {
-            padding: 4rem 4%;
+            padding: clamp(1.25rem, 3vw, 2.5rem) 4%;
             background: var(--sage-pale);
         }
 
@@ -164,7 +164,7 @@
             margin: 0 auto;
             background: var(--bg-white);
             border: 1px solid var(--sage-light);
-            padding: 4rem;
+            padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 3rem);
             text-align: center;
         }
 
@@ -172,20 +172,21 @@
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             color: var(--text-dark);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .details-time {
             font-size: 1.25rem;
             color: var(--sage-dark);
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.15rem;
             letter-spacing: 0.1em;
         }
 
         .details-arrive {
-            font-size: 1rem;
-            color: var(--text-body);
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--sage-dark);
+            margin-bottom: 1.5rem;
         }
 
         .details-location {
@@ -201,12 +202,14 @@
             margin-bottom: 0.5rem;
         }
 
-        .details-address a {
+        .details-address a,
+        .details-location a {
             color: var(--sage-dark);
             text-decoration: none;
         }
 
-        .details-address a:hover {
+        .details-address a:hover,
+        .details-location a:hover {
             text-decoration: underline;
         }
 
@@ -214,11 +217,11 @@
         .info-section {
             max-width: 700px;
             margin: 0 auto;
-            padding: 4rem 4%;
+            padding: clamp(1.5rem, 3vw, 2.5rem) 5%;
         }
 
         .info-block {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .info-block:last-child {
@@ -230,8 +233,8 @@
             font-size: 1.4rem;
             font-weight: 400;
             color: var(--text-dark);
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
             border-bottom: 1px solid var(--border);
         }
 
@@ -266,11 +269,44 @@
             line-height: 1.7;
         }
 
+        /* RSVP Button */
+        .rsvp-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.9rem 2.5rem;
+            background: var(--sage-dark);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .rsvp-link:hover {
+            background: var(--sage);
+        }
+
+        .rsvp-note {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            margin-top: 1rem;
+        }
+
+        .rsvp-note a {
+            color: var(--sage-dark);
+            text-decoration: none;
+        }
+
+        .rsvp-note a:hover {
+            text-decoration: underline;
+        }
+
         /* Celebration Note */
         .celebration-note {
             max-width: 700px;
             margin: 0 auto;
-            padding: 3rem 4% 4rem;
+            padding: clamp(1rem, 2vw, 1.5rem) 5% clamp(1.25rem, 2.5vw, 2rem);
             text-align: center;
             border-top: 1px solid var(--border);
         }
@@ -283,33 +319,65 @@
             line-height: 1.7;
         }
 
+        .celebration-note a {
+            color: var(--sage-dark);
+            text-decoration: none;
+        }
+
+        .celebration-note a:hover {
+            text-decoration: underline;
+        }
+
         /* Footer */
         footer {
             background: var(--sage-dark);
             color: var(--cream);
             text-align: center;
-            padding: 4rem 4%;
+            padding: clamp(2rem, 5vw, 4rem) 4%;
         }
 
         footer .memorial-dates {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
             margin-bottom: 1rem;
         }
 
-        /* Responsive */
-        @media (max-width: 640px) {
+        /* Responsive - Tablet and below */
+        @media (max-width: 768px) {
+            body {
+                line-height: 1.6;
+            }
+
             header {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.75rem;
+                padding: 1.25rem 4%;
             }
 
             .nav-links {
                 gap: 1rem;
             }
 
-            .details-card {
-                padding: 2.5rem 1.5rem;
+            .intro-section p {
+                font-size: 1.05rem;
+                line-height: 1.6;
+                margin-bottom: 0.75rem;
+            }
+
+            .details-date {
+                font-size: 1.5rem;
+            }
+
+            .details-location {
+                font-size: 1.25rem;
+            }
+
+            .info-block {
+                margin-bottom: 1.5rem;
+            }
+
+            .celebration-note p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -318,7 +386,7 @@
     <header>
         <div class="masthead">In Memoriam</div>
         <nav class="nav-links">
-            <a href="../">Memorial</a>
+            <a href="https://www.elizabethhaywood.life/">Home</a>
         </nav>
     </header>
 
@@ -327,17 +395,12 @@
     </div>
 
     <div class="page-title">
-        <h1>Burial Service</h1>
+        <h1>Family Burial Service</h1>
         <div class="sage-divider">
             <span></span>
-            <div class="leaf">&#10087;</div>
+            <div class="leaf" aria-hidden="true">&#10087;</div>
             <span></span>
         </div>
-    </div>
-
-    <div class="intro-section">
-        <p>Please join us to commit her body to the earth on February 7 at Bluestem Conservation Cemetery at 1:00 PM.</p>
-        <p class="private-note">Due to limited space and our desire for intimacy, the burial is only open to family. Please share this information with family, but not more widely. Bluestem is open to the public from dawn to dusk; all are welcome to visit her at any time after the burial.</p>
     </div>
 
     <div class="details-section">
@@ -345,37 +408,49 @@
             <p class="details-date">Saturday, February 7, 2026</p>
             <p class="details-time">1:00 PM</p>
             <p class="details-arrive">Please arrive by 12:45 PM</p>
-            <p class="details-location">Bluestem Conservation Cemetery</p>
-            <p class="details-address">1900 Hurdle Mills Road</p>
-            <p class="details-address"><a href="https://maps.google.com/?q=1900+Hurdle+Mills+Road+Cedar+Grove+NC+27231" target="_blank" rel="noopener noreferrer">Cedar Grove, NC 27231</a></p>
+            <p class="details-location"><a href="https://www.bluestemcemetery.org/" target="_blank" rel="noopener noreferrer" aria-label="Bluestem Conservation Cemetery (opens in new window)">Bluestem Conservation Cemetery</a></p>
+            <p class="details-address"><a href="https://maps.app.goo.gl/F3cuCsi4K16jGMLP8" target="_blank" rel="noopener noreferrer" aria-label="1900 Hurdle Mills Road, Cedar Grove, NC 27231 (opens in new window)">1900 Hurdle Mills Road<br>Cedar Grove, NC 27231</a></p>
+            <a href="https://forms.gle/XbqXrDnQZKCBwd4E6" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP (opens in new window)">RSVP</a>
+            <p class="rsvp-note">Please also RSVP for the <a href="https://www.elizabethhaywood.life/">Celebration of Life</a> if you plan to attend both.</p>
         </div>
+    </div>
+
+    <div class="intro-section">
+        <p class="private-note">Due to limited space and our desire for intimacy, the burial is only open to all family.</p>
+        <p class="private-note">Please share this information with all family, but not more widely.</p>
+        <p class="private-note">Bluestem is open to the public from dawn to dusk; all are welcome to visit her at any time after the burial.</p>
     </div>
 
     <div class="info-section">
         <div class="info-block">
             <h2>What to Expect</h2>
             <ul>
-                <li>Walking through a wild and wonderful nature preserve</li>
-                <li>A procession to her resting place</li>
+                <li>Walking about 3/4 mile through a wild and wonderful nature preserve</li>
+                <li>A procession to her resting place in an open meadow</li>
                 <li>Poems and music</li>
-                <li>A green burial ceremony</li>
+                <li>Lowering her body into the ground as part of a green burial</li>
                 <li>The ceremony will last approximately one hour</li>
             </ul>
         </div>
 
         <div class="info-block">
             <h2>What to Wear</h2>
-            <p>We will be out in the elements for the full hour, and tromping through a wild and wonderful nature preserve. Please dress comfortably in outdoor clothing and sturdy shoes. Bring an umbrella if needed.</p>
+            <p>We will be out in the elements for the full hour, and tromping through a wild and wonderful nature preserve. Please dress warmly in outdoor clothing and sturdy shoes. Bring an umbrella if needed.</p>
         </div>
 
         <div class="info-block">
             <h2>Parking</h2>
             <p>Park in the lot at the entrance or along the road near the drive. Volunteers will be on hand to help guide you.</p>
         </div>
+
+        <div class="info-block">
+            <h2>Facilities</h2>
+            <p>There are bathrooms on site but no water, so please bring water if you need it.</p>
+        </div>
     </div>
 
     <div class="celebration-note">
-        <p>The Celebration of Life will be approximately an hour after the burial, so you will have time to change and recharge.</p>
+        <p>The <a href="https://www.elizabethhaywood.life/">Celebration of Life</a> will be approximately an hour after the burial, so you will have time to change and recharge.</p>
     </div>
 
     <footer>
