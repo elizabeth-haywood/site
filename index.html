@@ -222,12 +222,6 @@
             color: var(--text-body);
         }
 
-        .coming-soon {
-            font-style: italic;
-            color: var(--sage);
-            margin-top: 1rem;
-        }
-
         /* Celebration Banner */
         .celebration-banner {
             padding: 3rem 4%;
@@ -397,7 +391,37 @@
             border-left: 2px solid var(--sage);
         }
 
-        /* Celebration Section */
+        .photo-pair-text h3 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1.25rem;
+        }
+
+        .photo-pair-text ol {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.7;
+            max-width: 480px;
+            padding-left: 3.25rem;
+            border-left: 2px solid var(--sage);
+        }
+
+        .photo-pair-text ol li {
+            margin-bottom: 0.75rem;
+        }
+
+        .photo-pair-text ol li::marker {
+            color: var(--sage);
+            font-style: normal;
+        }
+
+/* Celebration Section */
         .celebration-section {
             padding: 6rem 4%;
             background: var(--sage-pale);
@@ -635,6 +659,10 @@
                 object-fit: contain;
             }
 
+            .photo-pair-text ol {
+                font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+            }
+
             .hero {
                 grid-template-columns: 1fr;
             }
@@ -711,10 +739,8 @@
     </section>
 
     <section id="story" class="photo-statements">
-        <!-- Biographical content from elizabeth-bio.md will be integrated into this section in a future update -->
         <div class="photo-statements-header">
             <h2>Her Life</h2>
-            <p class="coming-soon">Updates to this section coming soon.</p>
             <div class="sage-divider">
                 <span></span>
                 <div class="leaf">&#10087;</div>
@@ -724,37 +750,103 @@
 
         <div class="photo-pair">
             <div class="photo-pair-image">
-                <img src="photos/mom-and-sparky.jpeg" alt="Elizabeth Haywood with her dog Sparky, sharing a joyful moment together">
+                <img src="photos/mom-and-sparky-2.jpeg" alt="Elizabeth Haywood smiling and hugging her dog Sparky">
             </div>
             <div class="photo-pair-text">
-                <p>She had a quick smile and a soft spot for little dogs that could make her laugh.</p>
+                <div>
+                    <h3>Smiling Is Key to Life</h3>
+                    <p>She had a quick smile and loved little dogs that could make her laugh.</p>
+                </div>
             </div>
         </div>
 
         <div class="photo-pair reverse">
             <div class="photo-pair-image">
-                <img src="photos/sunset-cocktail.jpg" alt="Elizabeth Haywood enjoying a beautiful sunset with a cocktail in hand">
+                <img src="photos/liza-grandchildren.jpg" alt="Elizabeth surrounded by her grandchildren, all smiling together" loading="lazy">
             </div>
             <div class="photo-pair-text">
-                <p>She enjoyed nothing more than a sunset and a cocktail with people she loved.</p>
+                <div>
+                    <h3>Kids Inspired Her</h3>
+                    <p>Children brought her great joy: her and Doug's children and grandchildren, and the work she did with families and children in Durham and Chapel Hill.</p>
+                </div>
             </div>
         </div>
 
         <div class="photo-pair">
             <div class="photo-pair-image">
-                <img src="photos/travel-puerto-rico.jpg" alt="Elizabeth Haywood traveling in Puerto Rico, exploring new and exotic places">
+                <img src="photos/sunset-cocktail.jpg" alt="Elizabeth Haywood enjoying a beautiful sunset with a cocktail in hand" loading="lazy">
             </div>
             <div class="photo-pair-text">
-                <p>She loved to travel to new and exotic places.</p>
+                <div>
+                    <h3>It's Fun to Have Fun and You Have to Know How</h3>
+                    <p>She enjoyed nothing more than a sunset and a cocktail with people she loved.</p>
+                </div>
             </div>
         </div>
 
         <div class="photo-pair reverse">
             <div class="photo-pair-image">
-                <img src="photos/beach-boats-kisses.jpg" alt="Elizabeth Haywood at the beach on a boat, enjoying the water and sunshine">
+                <img src="photos/liza-puerto-rico.jpg" alt="Elizabeth smiling at a café in Puerto Rico, 2005" loading="lazy">
             </div>
             <div class="photo-pair-text">
-                <p>She loved the beach and boats and kisses.</p>
+                <div>
+                    <h3>To Travel Is to Really See Yourself</h3>
+                    <p>Puerto Rico, the holy ruins of Tikal, the markets of Chichicastenango, a language school in Oaxaca, a chorus tour through France — the world called to her, and she always answered.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-pair">
+            <div class="photo-pair-image">
+                <img src="photos/beach-boats-kisses.jpg" alt="Elizabeth Haywood at the beach on a boat, enjoying the water and sunshine" loading="lazy">
+            </div>
+            <div class="photo-pair-text">
+                <div>
+                    <h3>Salt & Sun</h3>
+                    <p>She loved the beach and boats and kisses.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-pair reverse">
+            <div class="photo-pair-image">
+                <img src="photos/liza-doug-tree.jpg" alt="Elizabeth and Doug peering through the hollow of an ancient tree, smiling together in nature" loading="lazy">
+            </div>
+            <div class="photo-pair-text">
+                <div>
+                    <h3>Her Religion</h3>
+                    <p>Her religion was waking up grateful, celebrating the solstices, staying present through each day, and returning gently to this beautiful earth.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-pair">
+            <div class="photo-pair-image">
+                <img src="photos/liza-flowers-1976.jpg" alt="Young Elizabeth sitting in a field of wildflowers, 1976" loading="lazy">
+            </div>
+            <div class="photo-pair-text">
+                <div>
+                    <h3>What She Believed</h3>
+                    <p>She believed success was an adventurous life, a family that loves without judgment, and leaving this world better than she found it — with kindness, joy, and peace.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-pair reverse">
+            <div class="photo-pair-image">
+                <img src="photos/mary-liza-rose.jpg" alt="Elizabeth with Mary and Rosemary, all smiling together holding bouquets" loading="lazy">
+            </div>
+            <div class="photo-pair-text">
+                <div>
+                    <h3>Her Advice</h3>
+                    <ol>
+                        <li>Make contacts with adults who can advise and mentor you.</li>
+                        <li>Make a wide range of friends across all different socioeconomic spectrums.</li>
+                        <li>Don't be afraid to admit your mistakes, and try to do so with humor.</li>
+                        <li>Focus on friends with good habits and keep in touch with them as you age.</li>
+                        <li>Do what makes your heart sing.</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </section>
@@ -770,7 +862,7 @@
         </div>
 
         <div class="celebration-photo colonial-inn-photo">
-            <img src="photos/colonial-inn.jpg" alt="The Colonial Inn in Hillsborough, NC - venue for Elizabeth's celebration of life">
+            <img src="photos/colonial-inn.jpg" alt="The Colonial Inn in Hillsborough, NC - venue for Elizabeth's celebration of life" loading="lazy">
         </div>
 
         <div class="celebration-card">
@@ -801,7 +893,7 @@
         </div>
 
         <div class="celebration-photo">
-            <img src="photos/bluestem-cemetery.jpeg" alt="Bluestem Conservation Cemetery, a peaceful nature preserve and Elizabeth's final resting place">
+            <img src="photos/bluestem-cemetery.jpeg" alt="Bluestem Conservation Cemetery, a peaceful nature preserve and Elizabeth's final resting place" loading="lazy">
         </div>
 
         <div class="resting-place-card">
@@ -817,7 +909,7 @@
         </div>
 
         <div class="celebration-photo trail-map-container">
-            <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations">
+            <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
         </div>
     </section>
 
