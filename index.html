@@ -222,6 +222,61 @@
             color: var(--text-body);
         }
 
+        .coming-soon {
+            font-style: italic;
+            color: var(--sage);
+            margin-top: 1rem;
+        }
+
+        /* Celebration Banner */
+        .celebration-banner {
+            padding: 3rem 4%;
+            text-align: center;
+            background: var(--sage-dark);
+            color: var(--cream);
+        }
+
+        .celebration-banner-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .celebration-banner-date {
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .celebration-banner-location {
+            font-size: 1rem;
+            color: var(--sage-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .celebration-banner-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .celebration-banner .rsvp-link {
+            flex: 1;
+            max-width: 200px;
+            margin-top: 0;
+            background: var(--cream);
+            color: var(--sage-dark);
+            min-width: 160px;
+            text-align: center;
+        }
+
+        .celebration-banner .rsvp-link:hover {
+            background: var(--sage-pale);
+        }
+
         /* Quote Section */
         .quote-section {
             padding: 8rem 15%;
@@ -396,6 +451,15 @@
             margin-bottom: 2.5rem;
         }
 
+        .celebration-venue-description {
+            font-style: italic;
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 1.5rem auto 2rem;
+        }
+
         .celebration-details {
             list-style: none;
             padding: 0;
@@ -510,13 +574,6 @@
             margin-top: 2rem;
         }
 
-        .resting-place-coordinates {
-            font-size: 0.85rem;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            margin-top: 1.5rem;
-        }
-
         .trail-map-container {
             max-width: 800px;
             margin-top: 3rem;
@@ -541,6 +598,21 @@
             font-style: italic;
         }
 
+        footer .footer-contact {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--sage-light);
+        }
+
+        footer .footer-contact a {
+            color: var(--cream);
+            text-decoration: underline;
+        }
+
+        footer .footer-contact a:hover {
+            color: var(--sage-pale);
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .photo-pair {
@@ -552,7 +624,15 @@
             }
 
             .photo-pair-image {
-                height: 400px;
+                height: auto;
+            }
+
+            .photo-pair-image {
+                background-color: var(--cream);
+            }
+
+            .photo-pair-image img {
+                object-fit: contain;
             }
 
             .hero {
@@ -614,6 +694,16 @@
         </div>
     </section>
 
+    <section class="celebration-banner">
+        <p class="celebration-banner-title">Celebration of Liza</p>
+        <p class="celebration-banner-date">Saturday, February 7, 2026 &middot; 3:00 - 5:30 PM</p>
+        <p class="celebration-banner-location">The Colonial Inn &middot; Hillsborough, NC</p>
+        <div class="celebration-banner-buttons">
+            <a href="#celebration" class="rsvp-link">Details</a>
+            <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer">RSVP</a>
+        </div>
+    </section>
+
     <section class="quote-section">
         <blockquote class="large-quote">
             Liza had a unique ability to make people feel seen and heard. She put you at ease, she showed genuine curiosity about you, she was thoughtful and gracious.
@@ -621,8 +711,10 @@
     </section>
 
     <section id="story" class="photo-statements">
+        <!-- Biographical content from elizabeth-bio.md will be integrated into this section in a future update -->
         <div class="photo-statements-header">
             <h2>Her Life</h2>
+            <p class="coming-soon">Updates to this section coming soon.</p>
             <div class="sage-divider">
                 <span></span>
                 <div class="leaf">&#10087;</div>
@@ -686,11 +778,13 @@
             <p class="celebration-time">3:00 PM - 5:30 PM</p>
             <p class="celebration-location"><a href="https://colonialinn-nc.com/" target="_blank" rel="noopener noreferrer">The Colonial Inn</a></p>
             <p class="celebration-address">Hillsborough, North Carolina</p>
+            <p class="celebration-venue-description">The Colonial Inn is one of the oldest buildings operating as a boutique hotel in the state of North Carolina. This statuesque structure, nestled in the heart of downtown Historic Hillsborough, has currently been dated back to 1838.</p>
             <ul class="celebration-details">
                 <li>Storytelling, photos and socializing</li>
                 <li>Hors d'oeuvres and refreshments will be provided</li>
                 <li>Dress is informal</li>
             </ul>
+            <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP on Paperless Post (opens in new window)">RSVP</a>
             <a href="https://forms.gle/DNjbASi5STxnVthU7" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Share a Memory (opens in new window)">Share a Memory</a>
             <a href="https://colonialinn-nc.com/contact-us/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Directions to The Colonial Inn (opens in new window)">Directions</a>
         </div>
@@ -716,10 +810,10 @@
                 <li>Burial: Saturday, February 7, 2026 at 1:00 PM</li>
                 <li>Family-only ceremony</li>
                 <li>Plot: O16-R1-P9</li>
+                <li>GPS coordinates available on site</li>
             </ul>
             <p class="resting-place-note">Everyone is welcome to visit her any time. Bluestem is a nature preserve open to the public.</p>
-            <p class="resting-place-coordinates">GPS coordinates available on site</p>
-            <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Bluestem Cemetery website (opens in new window)">Visit Bluestem</a>
+            <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Bluestem Conservation Cemetery (opens in new window)">Learn More</a>
         </div>
 
         <div class="celebration-photo trail-map-container">
@@ -729,7 +823,7 @@
 
     <footer>
         <p class="memorial-dates">October 4, 1953 - January 26, 2026</p>
-
+        <p class="footer-contact">Contact: <a href="mailto:celebration@stoertz.com">celebration@stoertz.com</a></p>
     </footer>
 </body>
 </html>
