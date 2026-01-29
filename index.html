@@ -255,7 +255,17 @@
             margin-bottom: 1.5rem;
         }
 
+        .celebration-banner-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
         .celebration-banner .rsvp-link {
+            flex: 1;
+            max-width: 200px;
             margin-top: 0;
             background: var(--cream);
             color: var(--sage-dark);
@@ -564,13 +574,6 @@
             margin-top: 2rem;
         }
 
-        .resting-place-coordinates {
-            font-size: 0.85rem;
-            color: var(--sage);
-            letter-spacing: 0.05em;
-            margin-top: 1.5rem;
-        }
-
         .trail-map-container {
             max-width: 800px;
             margin-top: 3rem;
@@ -603,11 +606,11 @@
 
         footer .footer-contact a {
             color: var(--cream);
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         footer .footer-contact a:hover {
-            text-decoration: underline;
+            color: var(--sage-pale);
         }
 
         /* Responsive */
@@ -622,6 +625,10 @@
 
             .photo-pair-image {
                 height: auto;
+            }
+
+            .photo-pair-image {
+                background-color: var(--cream);
             }
 
             .photo-pair-image img {
@@ -691,8 +698,10 @@
         <p class="celebration-banner-title">Celebration of Liza</p>
         <p class="celebration-banner-date">Saturday, February 7, 2026 &middot; 3:00 - 5:30 PM</p>
         <p class="celebration-banner-location">The Colonial Inn &middot; Hillsborough, NC</p>
-        <a href="#celebration" class="rsvp-link">Details</a>
-        <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer">RSVP</a>
+        <div class="celebration-banner-buttons">
+            <a href="#celebration" class="rsvp-link">Details</a>
+            <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer">RSVP</a>
+        </div>
     </section>
 
     <section class="quote-section">
@@ -702,6 +711,7 @@
     </section>
 
     <section id="story" class="photo-statements">
+        <!-- Biographical content from elizabeth-bio.md will be integrated into this section in a future update -->
         <div class="photo-statements-header">
             <h2>Her Life</h2>
             <p class="coming-soon">Updates to this section coming soon.</p>
