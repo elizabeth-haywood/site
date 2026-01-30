@@ -421,6 +421,67 @@
             font-style: normal;
         }
 
+        /* Family Section */
+        .family-section {
+            padding: 6rem 4%;
+            background: var(--cream);
+        }
+
+        .family-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .family-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        .family-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border: 1px solid var(--sage-light);
+            padding: 4rem;
+            text-align: center;
+        }
+
+        .family-group {
+            padding: 2rem 0;
+        }
+
+        .family-group + .family-group {
+            border-top: 1px solid var(--border);
+        }
+
+        .family-group:first-child {
+            padding-top: 0;
+        }
+
+        .family-group:last-child {
+            padding-bottom: 0;
+        }
+
+        .family-group-label {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.75rem;
+        }
+
+        .family-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
 /* Celebration Section */
         .celebration-section {
             padding: 6rem 4%;
@@ -599,8 +660,8 @@
         }
 
         .trail-map-container {
-            max-width: 800px;
-            margin-top: 3rem;
+            max-width: 400px;
+            margin: 3rem auto 0;
         }
 
         /* Footer */
@@ -703,9 +764,10 @@
     <header>
         <div class="masthead">In Memoriam</div>
         <nav class="nav-links">
-            <a href="#story">Her Story</a>
+            <a href="#story">Life</a>
+            <a href="#her-family">Family</a>
             <a href="#celebration">Celebration</a>
-            <a href="#resting-place">Her Resting Place</a>
+            <a href="#resting-place">Resting Place</a>
         </nav>
     </header>
 
@@ -851,6 +913,44 @@
         </div>
     </section>
 
+    <section id="her-family" class="family-section">
+        <div class="family-header">
+            <h2>Her Family</h2>
+            <div class="sage-divider">
+                <span></span>
+                <div class="leaf">&#10087;</div>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="family-card">
+            <div class="family-group">
+                <p class="family-group-label">Husband</p>
+                <p class="family-names">Douglas Carpenter</p>
+            </div>
+            <div class="family-group">
+                <p class="family-group-label">Children</p>
+                <p class="family-names">Nassar, Aaron, Rosemary</p>
+            </div>
+            <div class="family-group">
+                <p class="family-group-label">Grandchildren</p>
+                <p class="family-names">Jackson, Winslow, Apollo, Finnigan, Tennyson, Max, Alexzandria</p>
+            </div>
+            <div class="family-group">
+                <p class="family-group-label">Siblings</p>
+                <p class="family-names">Charlie, Marguerite, John</p>
+            </div>
+            <div class="family-group">
+                <p class="family-group-label">Parents</p>
+                <p class="family-names">Mary Elizabeth Bowles &amp; Charles Lewis Haywood III</p>
+            </div>
+            <div class="family-group">
+                <p class="family-group-label">Dog</p>
+                <p class="family-names">Sparky</p>
+            </div>
+        </div>
+    </section>
+
     <section id="celebration" class="celebration-section">
         <div class="celebration-header">
             <h2>Celebration of Liza</h2>
@@ -902,14 +1002,17 @@
                 <li>Burial: Saturday, February 7, 2026 at 1:00 PM</li>
                 <li>Family-only ceremony</li>
                 <li>Plot: O16-R1-P9</li>
-                <li>GPS coordinates available on site</li>
             </ul>
+            <p style="font-size: 0.8rem; color: var(--sage); margin-top: 0.5rem;">GPS coordinates available on site</p>
+            <p class="resting-place-note">Liza wished for a green burial — to return gently to the earth and become part of the natural world she loved so deeply.</p>
             <p class="resting-place-note">Everyone is welcome to visit her any time. Bluestem is a nature preserve open to the public.</p>
             <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Bluestem Conservation Cemetery (opens in new window)">Learn More</a>
         </div>
 
         <div class="celebration-photo trail-map-container">
-            <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
+            <a href="https://www.bluestemcemetery.org/map.html" target="_blank" rel="noopener noreferrer">
+                <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
+            </a>
         </div>
     </section>
 
