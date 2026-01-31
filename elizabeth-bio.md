@@ -37,6 +37,49 @@
 
 ### Interests & Passions
 
+### Places That Shaped Her
+
+Some of the places that had the biggest impact on Elizabeth's life:
+
+- **Tikal, Guatemala** — The sense of power and holiness was obviously there.
+- **Chichicastenango, Guatemala** — A market town where she bought a machete that brought her joy and the power to do anything.
+- **Oaxaca, Mexico** — The language school here gave her the courage to travel alone.
+- **France** — A chorus tour through the country.
+- **Majorca** — Time spent here had a huge impact on her life.
+
+### Her Religion
+
+Elizabeth believed that waking up grateful to still be alive was part of her religion. Other parts of her religion included:
+
+- Expressing gratitude to all who had helped her in her life
+- Staying positive and present to her current illness
+- Celebrating the solstices, both winter and summer
+- Valuing the time she had left
+- Repenting for her sins and asking for forgiveness
+
+### What Success Meant to Her
+
+Elizabeth believed that success in life is to have lived an adventurous life, to have accomplished things both physically, spiritually and socially, to have a happy family that loves one another without judgment, to make peace with those who have been contentious, and to leave this life having made a difference.
+
+### Purpose of Life
+
+Elizabeth believed that the purpose of life is to leave the world better than we found it, to be kind to one another, understanding and non-judgmental, to bring love, joy and peace, to improve things, and to connect spiritually to this beautiful earth.
+
+### Favorite Places to Travel
+
+Some of Elizabeth's favorite places to travel were Costa Rica, Guatemala, the Mayan ruins of Tikal, Barbados, Puerto Morelos, England, and the Gentinnes France Music Festival.
+
+### Personal Accomplishments
+
+One accomplishment Elizabeth was especially proud of was having a green burial.
+
+### Advice to Younger People
+
+1. Make contacts with adults who can advise and mentor you.
+2. Make a wide range of friends across all different socioeconomic spectrums.
+3. Don't be afraid to admit your mistakes, and try to do so with humor.
+4. Focus on friends with good habits and keep in touch with them as you age.
+5. Do what makes your heart sing.
 
 ### Later Life & Legacy
 

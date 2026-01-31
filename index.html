@@ -273,7 +273,7 @@
 
         /* Quote Section */
         .quote-section {
-            padding: 8rem 15%;
+            padding: 4rem 15%;
             text-align: center;
             background: var(--cream);
             position: relative;
@@ -286,7 +286,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 1px;
-            height: 60px;
+            height: 30px;
             background: var(--sage);
         }
 
@@ -309,16 +309,52 @@
             color: var(--sage-dark);
         }
 
+        .family-portrait-wrap {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--sage-light);
+            background: var(--bg-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .family-portrait-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Consolidate portrait styles - used for circular family portraits and quote section */
+        .family-portrait,
+        .quote-portrait {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: 3px solid var(--sage-light);
+        }
+
+        /* Specific positioning for sibling photo */
+        .family-portrait-siblings {
+            object-position: center 8%;
+        }
+
         /* Photo Statements Section */
         .photo-statements {
             background: var(--bg-white);
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
         .photo-statements-header {
             text-align: center;
             padding: 0 4%;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .photo-statements-header h2 {
@@ -326,7 +362,7 @@
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 400;
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
 
         .sage-divider {
@@ -334,7 +370,7 @@
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem 0;
+            margin: 1rem 0;
         }
 
         .sage-divider span {
@@ -376,7 +412,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 4rem;
+            padding: 3rem;
         }
 
         .photo-pair-text p {
@@ -421,15 +457,150 @@
             font-style: normal;
         }
 
-/* Celebration Section */
+        /* Family Section */
+        .family-section {
+            padding: 4rem 4%;
+            background: var(--cream);
+        }
+
+        .family-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .family-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        .family-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border: 1px solid var(--sage-light);
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .family-group {
+            padding: 1.5rem 0;
+        }
+
+        .family-group + .family-group {
+            border-top: 1px solid var(--border);
+        }
+
+        .family-group:first-child {
+            padding-top: 0;
+        }
+
+        .family-group:last-child {
+            padding-bottom: 0;
+        }
+
+        .family-group-label {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 0.75rem;
+        }
+
+        .family-names {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+/* Early Years Gallery */
+        .gallery-section {
+            padding: 4rem 4%;
+            background: var(--bg-white);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background: #f5f0e8;
+            padding: 8px 8px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:nth-child(odd) {
+            transform: rotate(-1.5deg);
+        }
+
+        .gallery-item:nth-child(even) {
+            transform: rotate(1.2deg);
+        }
+
+        .gallery-item:nth-child(3) {
+            transform: rotate(-0.8deg);
+        }
+
+        .gallery-item:nth-child(5) {
+            transform: rotate(0.5deg);
+        }
+
+        .gallery-item:hover {
+            transform: rotate(0deg) scale(1.03);
+            z-index: 1;
+        }
+
+        .gallery-item img {
+            width: 170px;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            filter: sepia(0.15);
+        }
+
+        @media (max-width: 640px) {
+            .gallery-grid {
+                gap: 1.25rem;
+            }
+
+            .gallery-item img {
+                width: 130px;
+                height: 170px;
+            }
+        }
+
+        /* Celebration Section */
         .celebration-section {
-            padding: 6rem 4%;
+            padding: 4rem 4%;
             background: var(--sage-pale);
         }
 
         .celebration-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .celebration-header h2 {
@@ -444,7 +615,7 @@
             margin: 0 auto;
             background: var(--bg-white);
             border: 1px solid var(--sage-light);
-            padding: 4rem;
+            padding: 3rem;
             text-align: center;
         }
 
@@ -458,7 +629,7 @@
         .celebration-time {
             font-size: 1.25rem;
             color: var(--sage-dark);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             letter-spacing: 0.1em;
         }
 
@@ -472,7 +643,7 @@
         .celebration-address {
             font-size: 1rem;
             color: var(--text-body);
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .celebration-venue-description {
@@ -488,7 +659,7 @@
             list-style: none;
             padding: 0;
             border-top: 1px solid var(--border);
-            padding-top: 2rem;
+            padding-top: 1.5rem;
         }
 
         .celebration-details li {
@@ -527,7 +698,7 @@
 
         .rsvp-link {
             display: inline-block;
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
             padding: 1rem 3rem;
             background: var(--sage-dark);
             color: var(--cream);
@@ -544,13 +715,13 @@
 
         /* Resting Place Section */
         .resting-place-section {
-            padding: 6rem 4%;
+            padding: 4rem 4%;
             background: var(--bg-white);
         }
 
         .resting-place-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .resting-place-header h2 {
@@ -565,7 +736,7 @@
             margin: 0 auto;
             background: var(--cream);
             border: 1px solid var(--sage-light);
-            padding: 4rem;
+            padding: 3rem;
             text-align: center;
         }
 
@@ -594,13 +765,19 @@
             color: var(--text-body);
             font-size: 1.05rem;
             border-top: 1px solid var(--border);
-            padding-top: 2rem;
-            margin-top: 2rem;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .trail-map-container {
-            max-width: 800px;
-            margin-top: 3rem;
+            max-width: 400px;
+            margin: 2rem auto 0;
+        }
+
+        .gps-coordinates {
+            font-size: 0.8rem;
+            color: var(--sage);
+            margin-top: 0.5rem;
         }
 
         /* Footer */
@@ -608,7 +785,7 @@
             background: var(--sage-dark);
             color: var(--cream);
             text-align: center;
-            padding: 4rem 4%;
+            padding: 3rem 4%;
         }
 
         footer .memorial-dates {
@@ -693,7 +870,7 @@
             }
 
             .quote-section {
-                padding: 6rem 8%;
+                padding: 4rem 8%;
             }
         }
     </style>
@@ -703,9 +880,10 @@
     <header>
         <div class="masthead">In Memoriam</div>
         <nav class="nav-links">
-            <a href="#story">Her Story</a>
+            <a href="#story">Life</a>
+            <a href="#her-family">Family</a>
             <a href="#celebration">Celebration</a>
-            <a href="#resting-place">Her Resting Place</a>
+            <a href="#resting-place">Resting Place</a>
         </nav>
     </header>
 
@@ -733,6 +911,7 @@
     </section>
 
     <section class="quote-section">
+        <img src="photos/liza-headshot.jpg" alt="Elizabeth Haywood" class="quote-portrait">
         <blockquote class="large-quote">
             Liza had a unique ability to make people feel seen and heard. She put you at ease, she showed genuine curiosity about you, she was thoughtful and gracious.
         </blockquote>
@@ -838,15 +1017,93 @@
             </div>
             <div class="photo-pair-text">
                 <div>
-                    <h3>Her Advice</h3>
+                    <h3>Her Advice to Young People</h3>
                     <ol>
-                        <li>Make contacts with adults who can advise and mentor you.</li>
+                        <li>Find people you trust who can advise and mentor you.</li>
                         <li>Make a wide range of friends across all different socioeconomic spectrums.</li>
                         <li>Don't be afraid to admit your mistakes, and try to do so with humor.</li>
                         <li>Focus on friends with good habits and keep in touch with them as you age.</li>
                         <li>Do what makes your heart sing.</li>
                     </ol>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="early-years" class="gallery-section">
+        <div class="gallery-header">
+            <h2>Early Years</h2>
+            <div class="sage-divider">
+                <span></span>
+                <div class="leaf">&#10087;</div>
+                <span></span>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-1.png" alt="Baby Liza in a bonnet" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-2.png" alt="Young Liza holding her baby sibling" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-3.jpg" alt="Liza as a girl sitting in a leather chair, December 1960" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-4.jpg" alt="Liza's school portrait in a striped dress" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-5.png" alt="Liza as a girl in a red cardigan" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-6.jpg" alt="Liza as a teenager, portrait" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <section id="her-family" class="family-section">
+        <div class="family-header">
+            <h2>Her Family</h2>
+            <div class="sage-divider">
+                <span></span>
+                <div class="leaf">&#10087;</div>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="family-card">
+            <img src="photos/liza-doug-wedding.jpg" alt="Liza and Doug on their wedding day" class="family-portrait">
+            <div class="family-group">
+                <p class="family-group-label">Husband</p>
+                <p class="family-names">Douglas Carpenter</p>
+            </div>
+            <div class="family-group">
+                <div class="family-portrait-wrap">
+                    <img src="photos/nassar-aaron-rosemary.jpg" alt="Nassar, Aaron, and Rosemary together" loading="lazy">
+                </div>
+                <p class="family-group-label">Children</p>
+                <p class="family-names">Nassar, Aaron, Rosemary</p>
+            </div>
+            <div class="family-group">
+                <div class="family-portrait-wrap">
+                    <img src="photos/grandkids.jpg" alt="The whole family in matching holiday pajamas around the Christmas tree" loading="lazy">
+                </div>
+                <p class="family-group-label">Grandchildren</p>
+                <p class="family-names">Jackson, Winslow, Apollo, Finnigan, Tennyson, Max, Alexzandria</p>
+            </div>
+            <div class="family-group">
+                <img src="photos/haywood-siblings.jpg" alt="The Haywood siblings as children, sitting together on a porch" class="family-portrait family-portrait-siblings" loading="lazy">
+                <p class="family-group-label">Siblings</p>
+                <p class="family-names">Charlie, Marguerite, John</p>
+            </div>
+            <div class="family-group">
+                <p class="family-group-label">Parents</p>
+                <p class="family-names">Mary Elizabeth (Betty) Bowles &amp; Charles Lewis Haywood III</p>
+            </div>
+            <div class="family-group">
+                <img src="photos/sparky-2.jpg" alt="Sparky the dog relaxing in her bed" class="family-portrait" loading="lazy">
+                <p class="family-group-label">Sidekick</p>
+                <p class="family-names">Sparky</p>
             </div>
         </div>
     </section>
@@ -902,14 +1159,17 @@
                 <li>Burial: Saturday, February 7, 2026 at 1:00 PM</li>
                 <li>Family-only ceremony</li>
                 <li>Plot: O16-R1-P9</li>
-                <li>GPS coordinates available on site</li>
             </ul>
+            <p class="gps-coordinates">GPS coordinates available on site</p>
+            <p class="resting-place-note">Liza wished for a green burial — to return gently to the earth and become part of the natural world she loved so deeply.</p>
             <p class="resting-place-note">Everyone is welcome to visit her any time. Bluestem is a nature preserve open to the public.</p>
             <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Bluestem Conservation Cemetery (opens in new window)">Learn More</a>
         </div>
 
         <div class="celebration-photo trail-map-container">
-            <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
+            <a href="https://www.bluestemcemetery.org/map.html" target="_blank" rel="noopener noreferrer">
+                <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
+            </a>
         </div>
     </section>
 
