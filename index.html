@@ -273,7 +273,7 @@
 
         /* Quote Section */
         .quote-section {
-            padding: 8rem 15%;
+            padding: 4rem 15%;
             text-align: center;
             background: var(--cream);
             position: relative;
@@ -286,7 +286,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 1px;
-            height: 60px;
+            height: 30px;
             background: var(--sage);
         }
 
@@ -310,8 +310,8 @@
         }
 
         .family-portrait {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 1.5rem;
@@ -319,12 +319,31 @@
             border: 3px solid var(--sage-light);
         }
 
+        .family-portrait-wrap {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--sage-light);
+            background: var(--bg-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .family-portrait-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .quote-portrait {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 2.5rem;
+            margin: 0 auto 1.5rem;
             display: block;
             border: 3px solid var(--sage-light);
         }
@@ -332,13 +351,13 @@
         /* Photo Statements Section */
         .photo-statements {
             background: var(--bg-white);
-            padding: 6rem 0;
+            padding: 4rem 0;
         }
 
         .photo-statements-header {
             text-align: center;
             padding: 0 4%;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .photo-statements-header h2 {
@@ -346,7 +365,7 @@
             font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 400;
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
 
         .sage-divider {
@@ -354,7 +373,7 @@
             align-items: center;
             justify-content: center;
             gap: 1rem;
-            margin: 2rem 0;
+            margin: 1rem 0;
         }
 
         .sage-divider span {
@@ -396,7 +415,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 4rem;
+            padding: 3rem;
         }
 
         .photo-pair-text p {
@@ -443,13 +462,13 @@
 
         /* Family Section */
         .family-section {
-            padding: 6rem 4%;
+            padding: 4rem 4%;
             background: var(--cream);
         }
 
         .family-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .family-header h2 {
@@ -464,12 +483,12 @@
             margin: 0 auto;
             background: var(--bg-white);
             border: 1px solid var(--sage-light);
-            padding: 4rem;
+            padding: 3rem;
             text-align: center;
         }
 
         .family-group {
-            padding: 2rem 0;
+            padding: 1.5rem 0;
         }
 
         .family-group + .family-group {
@@ -502,15 +521,89 @@
             line-height: 1.8;
         }
 
-/* Celebration Section */
+/* Early Years Gallery */
+        .gallery-section {
+            padding: 4rem 4%;
+            background: var(--bg-white);
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            color: var(--text-dark);
+        }
+
+        .gallery-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            background: #f5f0e8;
+            padding: 8px 8px 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:nth-child(odd) {
+            transform: rotate(-1.5deg);
+        }
+
+        .gallery-item:nth-child(even) {
+            transform: rotate(1.2deg);
+        }
+
+        .gallery-item:nth-child(3) {
+            transform: rotate(-0.8deg);
+        }
+
+        .gallery-item:nth-child(5) {
+            transform: rotate(0.5deg);
+        }
+
+        .gallery-item:hover {
+            transform: rotate(0deg) scale(1.03);
+            z-index: 1;
+        }
+
+        .gallery-item img {
+            width: 170px;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            filter: sepia(0.15);
+        }
+
+        @media (max-width: 640px) {
+            .gallery-grid {
+                gap: 1.25rem;
+            }
+
+            .gallery-item img {
+                width: 130px;
+                height: 170px;
+            }
+        }
+
+        /* Celebration Section */
         .celebration-section {
-            padding: 6rem 4%;
+            padding: 4rem 4%;
             background: var(--sage-pale);
         }
 
         .celebration-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .celebration-header h2 {
@@ -525,7 +618,7 @@
             margin: 0 auto;
             background: var(--bg-white);
             border: 1px solid var(--sage-light);
-            padding: 4rem;
+            padding: 3rem;
             text-align: center;
         }
 
@@ -539,7 +632,7 @@
         .celebration-time {
             font-size: 1.25rem;
             color: var(--sage-dark);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             letter-spacing: 0.1em;
         }
 
@@ -553,7 +646,7 @@
         .celebration-address {
             font-size: 1rem;
             color: var(--text-body);
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .celebration-venue-description {
@@ -569,7 +662,7 @@
             list-style: none;
             padding: 0;
             border-top: 1px solid var(--border);
-            padding-top: 2rem;
+            padding-top: 1.5rem;
         }
 
         .celebration-details li {
@@ -608,7 +701,7 @@
 
         .rsvp-link {
             display: inline-block;
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
             padding: 1rem 3rem;
             background: var(--sage-dark);
             color: var(--cream);
@@ -625,13 +718,13 @@
 
         /* Resting Place Section */
         .resting-place-section {
-            padding: 6rem 4%;
+            padding: 4rem 4%;
             background: var(--bg-white);
         }
 
         .resting-place-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2.5rem;
         }
 
         .resting-place-header h2 {
@@ -646,7 +739,7 @@
             margin: 0 auto;
             background: var(--cream);
             border: 1px solid var(--sage-light);
-            padding: 4rem;
+            padding: 3rem;
             text-align: center;
         }
 
@@ -675,13 +768,13 @@
             color: var(--text-body);
             font-size: 1.05rem;
             border-top: 1px solid var(--border);
-            padding-top: 2rem;
-            margin-top: 2rem;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .trail-map-container {
             max-width: 400px;
-            margin: 3rem auto 0;
+            margin: 2rem auto 0;
         }
 
         /* Footer */
@@ -689,7 +782,7 @@
             background: var(--sage-dark);
             color: var(--cream);
             text-align: center;
-            padding: 4rem 4%;
+            padding: 3rem 4%;
         }
 
         footer .memorial-dates {
@@ -774,7 +867,7 @@
             }
 
             .quote-section {
-                padding: 6rem 8%;
+                padding: 4rem 8%;
             }
         }
     </style>
@@ -934,6 +1027,37 @@
         </div>
     </section>
 
+    <section id="early-years" class="gallery-section">
+        <div class="gallery-header">
+            <h2>Early Years</h2>
+            <div class="sage-divider">
+                <span></span>
+                <div class="leaf">&#10087;</div>
+                <span></span>
+            </div>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-1.png" alt="Baby Liza in a bonnet" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-2.png" alt="Young Liza holding her baby sibling" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-3.jpg" alt="Liza as a girl sitting in a leather chair, December 1960" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-4.jpg" alt="Liza's school portrait in a striped dress" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-5.png" alt="Liza as a girl in a red cardigan" loading="lazy">
+            </div>
+            <div class="gallery-item">
+                <img src="photos/liza-childhood-6.jpg" alt="Liza as a teenager, portrait" loading="lazy">
+            </div>
+        </div>
+    </section>
+
     <section id="her-family" class="family-section">
         <div class="family-header">
             <h2>Her Family</h2>
@@ -951,14 +1075,21 @@
                 <p class="family-names">Douglas Carpenter</p>
             </div>
             <div class="family-group">
+                <div class="family-portrait-wrap">
+                    <img src="photos/nassar-aaron-rosemary.jpg" alt="Nassar, Aaron, and Rosemary together" loading="lazy">
+                </div>
                 <p class="family-group-label">Children</p>
                 <p class="family-names">Nassar, Aaron, Rosemary</p>
             </div>
             <div class="family-group">
+                <div class="family-portrait-wrap">
+                    <img src="photos/grandkids.jpg" alt="The whole family in matching holiday pajamas around the Christmas tree" loading="lazy">
+                </div>
                 <p class="family-group-label">Grandchildren</p>
                 <p class="family-names">Jackson, Winslow, Apollo, Finnigan, Tennyson, Max, Alexzandria</p>
             </div>
             <div class="family-group">
+                <img src="photos/haywood-siblings.jpg" alt="The Haywood siblings as children, sitting together on a porch" class="family-portrait" style="object-position: center 8%;" loading="lazy">
                 <p class="family-group-label">Siblings</p>
                 <p class="family-names">Charlie, Marguerite, John</p>
             </div>
@@ -967,7 +1098,8 @@
                 <p class="family-names">Mary Elizabeth Bowles &amp; Charles Lewis Haywood III</p>
             </div>
             <div class="family-group">
-                <p class="family-group-label">Dog</p>
+                <img src="photos/sparky-2.jpg" alt="Sparky the dog relaxing in her bed" class="family-portrait" loading="lazy">
+                <p class="family-group-label">Sidekick</p>
                 <p class="family-names">Sparky</p>
             </div>
         </div>
