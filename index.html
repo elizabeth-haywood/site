@@ -309,16 +309,6 @@
             color: var(--sage-dark);
         }
 
-        .family-portrait {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1.5rem;
-            display: block;
-            border: 3px solid var(--sage-light);
-        }
-
         .family-portrait-wrap {
             width: 200px;
             height: 200px;
@@ -338,6 +328,8 @@
             object-fit: cover;
         }
 
+        /* Consolidate portrait styles - used for circular family portraits and quote section */
+        .family-portrait,
         .quote-portrait {
             width: 200px;
             height: 200px;
@@ -346,6 +338,11 @@
             margin: 0 auto 1.5rem;
             display: block;
             border: 3px solid var(--sage-light);
+        }
+
+        /* Specific positioning for sibling photo */
+        .family-portrait-siblings {
+            object-position: center 8%;
         }
 
         /* Photo Statements Section */
@@ -777,6 +774,12 @@
             margin: 2rem auto 0;
         }
 
+        .gps-coordinates {
+            font-size: 0.8rem;
+            color: var(--sage);
+            margin-top: 0.5rem;
+        }
+
         /* Footer */
         footer {
             background: var(--sage-dark);
@@ -1089,7 +1092,7 @@
                 <p class="family-names">Jackson, Winslow, Apollo, Finnigan, Tennyson, Max, Alexzandria</p>
             </div>
             <div class="family-group">
-                <img src="photos/haywood-siblings.jpg" alt="The Haywood siblings as children, sitting together on a porch" class="family-portrait" style="object-position: center 8%;" loading="lazy">
+                <img src="photos/haywood-siblings.jpg" alt="The Haywood siblings as children, sitting together on a porch" class="family-portrait family-portrait-siblings" loading="lazy">
                 <p class="family-group-label">Siblings</p>
                 <p class="family-names">Charlie, Marguerite, John</p>
             </div>
@@ -1157,7 +1160,7 @@
                 <li>Family-only ceremony</li>
                 <li>Plot: O16-R1-P9</li>
             </ul>
-            <p style="font-size: 0.8rem; color: var(--sage); margin-top: 0.5rem;">GPS coordinates available on site</p>
+            <p class="gps-coordinates">GPS coordinates available on site</p>
             <p class="resting-place-note">Liza wished for a green burial — to return gently to the earth and become part of the natural world she loved so deeply.</p>
             <p class="resting-place-note">Everyone is welcome to visit her any time. Bluestem is a nature preserve open to the public.</p>
             <a href="https://www.bluestemcemetery.org/" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Learn more about Bluestem Conservation Cemetery (opens in new window)">Learn More</a>
