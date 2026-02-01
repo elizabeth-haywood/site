@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obituary | Elizabeth Bowles Haywood</title>
+    <meta name="description" content="Obituary for Elizabeth (Liza) Bowles Haywood (1953-2026) of Martinsburg, WV. Loving wife, mother, grandmother, and free spirit.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elizabethhaywood.life/obituary/">
+    <meta property="og:title" content="Obituary | Elizabeth Bowles Haywood">
+    <meta property="og:description" content="Obituary for Elizabeth (Liza) Bowles Haywood (1953-2026). Loving wife, mother, grandmother, and free spirit.">
+    <meta property="og:image" content="https://elizabethhaywood.life/elizabeth.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://elizabethhaywood.life/obituary/">
+    <meta name="twitter:title" content="Obituary | Elizabeth Bowles Haywood">
+    <meta name="twitter:description" content="Obituary for Elizabeth (Liza) Bowles Haywood (1953-2026). Loving wife, mother, grandmother, and free spirit.">
+    <meta name="twitter:image" content="https://elizabethhaywood.life/elizabeth.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <!-- Font Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sage-dark: #4a5d4a;
+            --sage: #7d9d7d;
+            --sage-light: #a8c4a8;
+            --sage-pale: #d4e4d4;
+            --cream: #f8f6f2;
+            --bg-white: #ffffff;
+            --text-dark: #2d3a2d;
+            --text-body: #5a6b5a;
+            --border: #d4e4d4;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background: var(--cream);
+            color: var(--text-body);
+            line-height: 1.8;
+        }
+
+        /* Skip Navigation Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--sage-dark);
+            color: var(--cream);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header */
+        header {
+            padding: clamp(1rem, 2.5vw, 2rem) 4%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-white);
+        }
+
+        .masthead {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-body);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--sage-dark);
+        }
+
+        /* Hero */
+        .hero {
+            background: var(--bg-white);
+            padding: clamp(2.5rem, 6vw, 4rem) 4% clamp(1.5rem, 4vw, 2.5rem);
+            text-align: center;
+        }
+
+        .hero-portrait {
+            width: clamp(160px, 20vw, 220px);
+            height: clamp(160px, 20vw, 220px);
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid var(--sage-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-dates {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            letter-spacing: 0.1em;
+        }
+
+        .sage-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .sage-divider span {
+            width: 80px;
+            height: 1px;
+            background: var(--sage);
+        }
+
+        .sage-divider .leaf {
+            color: var(--sage);
+            font-size: 1.25rem;
+        }
+
+        /* Obituary Content */
+        .obituary-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 4vw, 2.5rem) 5% clamp(2rem, 5vw, 3rem);
+        }
+
+        .obituary-section p {
+            font-size: 1.1rem;
+            color: var(--text-body);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .obituary-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .obituary-section p.closing {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--text-dark);
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* Donation Note */
+        .donation-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 3vw, 2rem) 5%;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .donation-section p {
+            font-size: 1.05rem;
+            color: var(--text-body);
+            line-height: 1.7;
+        }
+
+        .donation-section a {
+            color: var(--sage-dark);
+            text-decoration: none;
+        }
+
+        .donation-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Links Section */
+        .links-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: clamp(1.5rem, 3vw, 2rem) 5%;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .links-section p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .rsvp-link {
+            display: inline-block;
+            margin: 0.5rem 0.25rem;
+            padding: 0.9rem 2.5rem;
+            background: var(--sage-dark);
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .rsvp-link:hover {
+            background: var(--sage);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--sage-dark);
+            color: var(--cream);
+            text-align: center;
+            padding: clamp(2rem, 5vw, 3rem) 4%;
+            margin-top: clamp(1.5rem, 4vw, 2.5rem);
+        }
+
+        footer .memorial-dates {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-contact {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--sage-light);
+        }
+
+        footer .footer-contact a {
+            color: var(--cream);
+            text-decoration: underline;
+        }
+
+        footer .footer-contact a:hover {
+            color: var(--sage-pale);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                line-height: 1.6;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 1.25rem 4%;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .obituary-section p {
+                font-size: 1.05rem;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#obituary" class="skip-link">Skip to obituary</a>
+    <header>
+        <div class="masthead">In Memoriam</div>
+        <nav class="nav-links">
+            <a href="https://www.elizabethhaywood.life/">Home</a>
+            <a href="https://www.elizabethhaywood.life/#celebration">Celebration</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <img src="../elizabeth.jpg" alt="Elizabeth Bowles Haywood" class="hero-portrait">
+        <h1>Elizabeth Bowles Haywood</h1>
+        <p class="hero-dates">October 4, 1953 &mdash; January 26, 2026</p>
+        <div class="sage-divider">
+            <span></span>
+            <div class="leaf" aria-hidden="true">&#10087;</div>
+            <span></span>
+        </div>
+    </div>
+
+    <main id="obituary" class="obituary-section">
+        <p>Elizabeth (Liza) Bowles Haywood, 72, died on the morning of Monday, January 26, 2026, from complications of ALS. At the time of her death, she was with her husband, Doug, and her three children, Rosie, Aaron, and Nassar.</p>
+
+        <p>Liza, known affectionately as Missy, was born in 1953 to Chuck and Betty Haywood of Elkin, NC. She grew up in Morganton, NC, where she was voted &ldquo;Most Likely to Succeed&rdquo; in 9th grade, and later attended Chatham Hall in Virginia. She went on to study nursing at Duke University and early childhood education at Antioch College.</p>
+
+        <p>While at Antioch, she met her first husband, with whom she had three children. She first settled in Boone, NC, and later in Winston-Salem, NC, where she raised her family and ran her bookkeeping business, eventually moving to Hillsborough, NC. After a brief second marriage, she married her soulmate, Douglas Carpenter, in Durham, NC. She and Doug traveled for two years in a camper before moving to Damascus, VA, and recently to Martinsburg, WV.</p>
+
+        <p>Liza was a free spirit who loved dancing, cooking, music, gardening, and traveling. Her favorite travel memories were swimming in Costa Rica, contra dancing in the mountains of France, shopping the markets of Guatemala, exploring the Mayan ruins of Tikal, flamingo watching in Puerto Morelos (Mexico), taking a balloon ride in France, and biking through Germany and Belgium. She had a long list of places yet to visit; even as ALS progressed, she would often entertain ideas of traveling.</p>
+
+        <p>She had a warm presence and loved children. In mid-life, she graduated from the UNC School of Social Work to pursue a career of service as a Child and Family Therapist at Carolina Outreach, LLC. She always found great contentment in watching her own children grow and building close relationships with her grandchildren. Her guiding principles were to leave the world better than she found it; to be kind, understanding, and non-judgmental; and to connect spiritually to this beautiful earth. She will be buried in a green burial service at Bluestem Conservation Cemetery in Cedar Grove, NC, and a Celebration of Life will be held in Hillsborough, NC, in her memory.</p>
+
+        <p>Liza leaves behind her husband, Doug; her children, Rosie, Aaron, and Nassar; her stepchildren, Andrew and Carrie; her siblings, John, Charlie, and Marguerite and their families; and 12 grandchildren and step-grandchildren.</p>
+
+        <p>In lieu of flowers, Liza requested donations be made to the <a href="https://www.als.org/" target="_blank" rel="noopener noreferrer" aria-label="ALS Association (opens in new window)">ALS Association</a>. More importantly, she leaves us with advice to &ldquo;be true to yourself,&rdquo; to &ldquo;live an adventurous life,&rdquo; and to &ldquo;bring love and joy.&rdquo; When asked recently what advice she would give to her younger self, she wrote: &ldquo;Do what makes your heart sing!&rdquo;</p>
+
+        <p class="closing">Her friends and family will miss her deeply and carry her memory warmly in their hearts.</p>
+    </main>
+
+    <div class="links-section">
+        <p>Join us as we celebrate Liza&rsquo;s life.</p>
+        <a href="https://www.elizabethhaywood.life/#celebration" class="rsvp-link">Celebration Details</a>
+        <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP on Paperless Post (opens in new window)">RSVP</a>
+    </div>
+
+    <footer>
+        <p class="memorial-dates">October 4, 1953 &mdash; January 26, 2026</p>
+        <p class="footer-contact">Contact: <a href="mailto:celebration@stoertz.com">celebration@stoertz.com</a></p>
+    </footer>
+</body>
+</html>
