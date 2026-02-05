@@ -269,10 +269,21 @@
             line-height: 1.7;
         }
 
+        .info-block .note {
+            margin-top: 0.75rem;
+        }
+
         /* RSVP Button */
+        .rsvp-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
         .rsvp-link {
             display: inline-block;
-            margin-top: 1.5rem;
             padding: 0.9rem 2.5rem;
             background: var(--sage-dark);
             color: var(--cream);
@@ -410,9 +421,11 @@
             <p class="details-arrive">Please arrive by 12:45 PM</p>
             <p class="details-location"><a href="https://www.bluestemcemetery.org/" target="_blank" rel="noopener noreferrer" aria-label="Bluestem Conservation Cemetery (opens in new window)">Bluestem Conservation Cemetery</a></p>
             <p class="details-address"><a href="https://maps.app.goo.gl/F3cuCsi4K16jGMLP8" target="_blank" rel="noopener noreferrer" aria-label="1900 Hurdle Mills Road, Cedar Grove, NC 27231 (opens in new window)">1900 Hurdle Mills Road<br>Cedar Grove, NC 27231</a></p>
-            <a href="https://forms.gle/XbqXrDnQZKCBwd4E6" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP for burial (opens in new window)">Burial RSVP</a>
-            <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP for celebration of life (opens in new window)">Celebration RSVP</a>
-            <a href="https://forms.gle/DNjbASi5STxnVthU7" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Share a story at the celebration (opens in new window)">Share a Story</a>
+            <div class="rsvp-links">
+                <a href="https://forms.gle/XbqXrDnQZKCBwd4E6" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP form for burial service (opens in new window)">Burial RSVP</a>
+                <a href="https://pp.events/b4n4n77d" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="RSVP form for celebration of life (opens in new window)">Celebration RSVP</a>
+                <a href="https://forms.gle/DNjbASi5STxnVthU7" class="rsvp-link" target="_blank" rel="noopener noreferrer" aria-label="Share a story form for the celebration (opens in new window)">Share a Story</a>
+            </div>
         </div>
     </div>
 
@@ -431,7 +444,7 @@
                 <li>Lowering her body into the grave as part of a green burial</li>
                 <li>You will be invited to place a flower (which we will provide) or a written note into the grave</li>
             </ul>
-            <p style="margin-top: 0.75rem;"><strong>Note:</strong> If you write a note ahead of time, please use compostable materials only. We will have compostable paper and pencils available on-site.</p>
+            <p class="note"><strong>Note:</strong> If you write a note ahead of time, please use compostable materials only (paper, cardboard, plant-based materials—no plastic or synthetic items). We will have compostable paper and pencils available on-site.</p>
         </div>
 
         <div class="info-block">
