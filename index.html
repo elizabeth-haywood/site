@@ -839,6 +839,26 @@
             margin: 2rem auto 0;
         }
 
+        .bluestem-images {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem auto 0;
+            max-width: 850px;
+        }
+
+        .bluestem-images .celebration-photo {
+            margin: 0;
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+        }
+
+        .bluestem-images .celebration-photo img {
+            border-radius: 4px;
+        }
+
         /* Footer */
         footer {
             background: var(--sage-dark);
@@ -1276,10 +1296,15 @@
             </a>
         </div>
 
-        <div class="celebration-photo trail-map-container">
-            <a href="https://www.bluestemcemetery.org/map.html" target="_blank" rel="noopener noreferrer">
-                <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
-            </a>
+        <div class="bluestem-images">
+            <div class="celebration-photo trail-map-container">
+                <a href="https://www.bluestemcemetery.org/map.html" target="_blank" rel="noopener noreferrer">
+                    <img src="photos/bluestem-trail-map.jpg" alt="Trail map of Bluestem Conservation Cemetery showing paths and burial locations" loading="lazy">
+                </a>
+            </div>
+            <div class="celebration-photo trail-map-container">
+                <img src="photos/bluestem-stone.jpeg" alt="Stone marker at Bluestem reading 'BLUESTEM Est. 2021'" loading="lazy">
+            </div>
         </div>
     </section>
 
